@@ -1,0 +1,244 @@
+/* ==================================================
+  VARIABLES
+================================================== */
+
+:root {
+  --primary-bg: #0e1116;
+  --primary-bg-opacity: #0e1116bb;
+
+  --primary-border: #ffffff;
+  --secondary-border: #35383b;
+
+  --primary-content: #ffffff;
+  --secondary-content: #c4bcbc;
+
+  --primary-color: #7c5cff;
+  --primary-color-opacity: #7c5cff;
+
+  --secondary-color: #38d9a9;
+  --secondary-color-opacity: #38d9a91c;
+
+  --shadow: 0 10px 30px #010101;
+
+  --radius: 15px;
+
+  --max-width: 1200px;
+
+  --font-body: "Inter", sans-serif;
+}
+
+/* ==================================================
+  LIGHT THEME
+================================================== */
+
+[data-theme="light"] {
+  --primary-bg: #ffffff;
+  --primary-bg-opacity: #ffffff67;
+
+  --primary-border: #0e1116;
+  --secondary-border: #83878d;
+
+  --primary-content: #111827;
+  --secondary-content: #6b7280;
+
+  --secondary-color: #d90054;
+  --secondary-color-opacity: #d900541c;
+
+  --shadow: 0 10px 25px #a3a3a3;
+}
+
+/* ==================================================
+  SHARED LAYOUT
+================================================== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100%;
+  line-height: 1.7;
+  color: var(--primary-content);
+  background: var(--primary-bg);
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 75px;
+}
+
+#footer-component {
+  margin-top: auto;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+h1 {
+  color: var(--primary-content);
+}
+
+h2 {
+  color: var(--primary-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 120px;
+  margin-top: -120px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.container {
+  width: min(var(--max-width), 90%);
+  margin-inline: auto;
+}
+
+.content {
+  text-align: center;
+}
+
+/* ==================================================
+  HEADER
+================================================== */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  border-bottom: 1px solid var(--secondary-border);
+  background: var(--primary-bg-opacity);
+  backdrop-filter: blur(15px);
+}
+
+.header-inner {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.nav {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  gap: 2rem;
+}
+
+.nav a {
+  color: var(--primary-content);
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+.theme-btn {
+  width: 46px;
+  height: 46px;
+  border: 1.5px solid var(--secondary-border);
+  border-radius: 100%;
+  cursor: pointer;
+  background: var(--primary-bg);
+}
+
+.theme-btn:hover {
+  transform: rotate(15deg);
+}
+
+/* ==================================================
+  FOOTER
+================================================== */
+
+footer {
+  text-align: center;
+  border-top: 1px solid var(--secondary-border);
+  margin-top: auto;
+}
+
+/* ==================================================
+  RESPONSIVE
+================================================== */
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  main {
+    padding-top: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .social-links a {
+    width: 100%;
+    text-align: center;
+  }
+}

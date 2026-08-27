@@ -1,0 +1,231 @@
+/* ==================================================
+  HERO
+================================================== */
+.eyebrow {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary-color);
+  display: block;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(4rem, 7vw, 5rem);
+  line-height: 1.1;
+}
+
+.hero-text {
+  max-width: 850px;
+  text-align: justify;
+  margin-inline: auto;
+}
+
+.title-accent {
+  color: var(--primary-color);
+}
+
+/* ==================================================
+  ABOUT
+================================================== */
+
+.about-text {
+  max-width: 850px;
+  text-align: justify;
+  margin-inline: auto;
+}
+
+/* ==================================================
+  TECH STACK
+================================================== */
+
+.skill-grid {
+  margin: 2rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skill-grid div {
+  padding: 1rem 6rem;
+  border: 1px solid var(--secondary-border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.skill-grid div:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-border);
+}
+
+/* ==================================================
+  FAVORITES
+================================================== */
+
+.skill-grid {
+  margin: 2rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skill-grid div {
+  padding: 1rem 6rem;
+  border: 1px solid var(--secondary-border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.skill-grid div:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-border);
+}
+
+/* ==================================================
+  SEARCH
+================================================== */
+
+.search-wrap {
+  max-width: 700px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#search {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--secondary-border);
+  background: var(--primary-bg);
+  color: var(--primary-content);
+}
+
+#search:focus {
+  outline: none;
+  border-color: var(--primary-content);
+}
+
+/* ==================================================
+  PROJECT FILTERS
+================================================== */
+
+.filters {
+  padding: 1rem;
+  gap: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.chip {
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1px solid var(--secondary-border);
+  background: var(--primary-bg);
+  color: var(--primary-content);
+}
+
+.chip:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-border);
+}
+
+.chip.active {
+  color: var(--primary-color);
+  border-color: var(--primary-border);
+}
+
+/* ==================================================
+  PROJECT GRID
+================================================== */
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+
+.card {
+  flex: 0 0 calc(33.33% - 60px);
+  padding: 1.4rem;
+  border: 1px solid var(--secondary-border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-border);
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-emoji {
+  font-size: 1.8rem;
+}
+
+.card p {
+  color: var(--secondary-content);
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: var(--secondary-color-opacity);
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.card-link {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.empty {
+  text-align: center;
+  color: var(--secondary-content);
+}
+
+/* ==================================================
+  CONTACT
+================================================== */
+
+.social-links {
+  margin: 1rem;
+  gap: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  padding: 0.8rem 3rem;
+  border: 1px solid var(--secondary-border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.social-links a:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-border);
+}

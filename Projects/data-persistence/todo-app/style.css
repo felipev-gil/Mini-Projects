@@ -1,0 +1,199 @@
+/* ==================================================
+  TODO APP
+================================================== */
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  padding: 2rem;
+  width: 100%;
+  max-width: 540px;
+  background: var(--primary-bg);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.todo-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  gap: 13px;
+  background: var(--primary-bg);
+  border-bottom: 1px solid var(--secondary-border);
+}
+
+.todo-input input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--secondary-border);
+  background: var(--primary-bg);
+  color: var(--primary-content);
+}
+
+.todo-input button {
+  width: 60px;
+  height: 50px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+.filters {
+  padding: 1rem;
+  gap: 15px;
+  display: flex;
+  color: var(--primary-content);
+  border-bottom: 1px solid var(--secondary-border);
+}
+
+.filter {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 16px;
+  border: 1px solid var(--secondary-border);
+}
+
+.filter:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-border);
+}
+
+.todos-container {
+  padding: 15px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#todos-list {
+  list-style-type: none;
+}
+
+.todo-item {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.todo-item:hover {
+  background-color: var(--light);
+}
+
+.checkbox-container {
+  margin-right: 15px;
+}
+
+.todo-checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-content);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.todo-checkbox:checked + .checkmark {
+  background-color: var(--success);
+  border-color: var(--success);
+}
+
+.todo-checkbox:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.todo-item-text {
+  flex: 1;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.todo-item.completed .todo-item-text {
+  text-decoration: line-through;
+  color: var(--gray);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--gray);
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.todo-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  color: var(--danger);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  color: var(--gray);
+}
+
+.empty-state i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.hidden {
+  display: none;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-top: 1px solid var(--secondary-border);
+  background-color: var(--light);
+  font-size: 14px;
+}
+
+#items-left {
+  color: var(--gray);
+}
+
+#clear-completed {
+  background: none;
+  border: none;
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#clear-completed:hover {
+  color: var(--danger);
+}

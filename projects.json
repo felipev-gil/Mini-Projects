@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Currency Converter",
+    "description": "Convert currencies using real-time exchange rates from a public API.",
+    "category": "API Integration",
+    "emoji": "💱",
+    "url": "Projects/api-integration/currency-convertor/index.html",
+    "tags": ["api", "currency", "exchange rates", "finance", "money"],
+    "favorite": true
+  },
+  {
+    "title": "Todo App",
+    "description": "A simple todo app to organize your thoughts and ideas.",
+    "category": "Data Persistence",
+    "emoji": "📝",
+    "url": "Projects/data-persistence/todo-app",
+    "tags": ["data", "todo", "app", "notes", "tasks"],
+    "favorite": true
+  },
+  {
+    "title": "Tic Tac Toe",
+    "description": "Play the fun and classic Tic Tac Toe game with a friend.",
+    "category": "Games",
+    "emoji": "❌⭕",
+    "url": "Projects/games/tic-tac-toe/index.html",
+    "tags": ["game", "tic tac toe", "fun"],
+    "favorite": true
+  },
+  {
+    "title": "Password Generator",
+    "description": "Generate secure passwords with customizable options.",
+    "category": "Utilities",
+    "emoji": "🔑",
+    "url": "Projects/utilities/password-generator/index.html",
+    "tags": ["utilities", "security", "password", "generator"],
+    "favorite": false
+  }
+]

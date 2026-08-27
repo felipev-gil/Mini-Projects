@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Projects Portfolio</title>
+    <meta
+      name="description"
+      content="A collection of frontend mini projects built with HTML, CSS, and JavaScript."
+    />
+
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    </script>
+
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./Shared/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="header-component"></div>
+
+    <main>
+      <section class="hero">
+        <div class="container content">
+          <p class="eyebrow">Web Developer Portfolio</p>
+
+          <h1>
+            Small Projects,
+            <span class="title-accent"> Continuous Improvement. </span>
+          </h1>
+
+          <p class="hero-text">
+            A curated collection of practical web applications built to hone
+            problem-solving skills and master modern front-end development
+            techniques using HTML, CSS, and JavaScript.
+          </p>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container content">
+          <h2>About Me</h2>
+
+          <p class="about-text">
+            I thrive on building small, focused applications that address
+            tangible problems and continually expand my development toolkit.
+            These projects allow me to dive deep into core web concepts,
+            including DOM manipulation, complex API integration, state
+            management using local storage, responsive design implementation,
+            and modern JavaScript practices.
+          </p>
+
+          <p class="about-text">
+            While I am always exploring new frameworks, I maintain a passion for
+            the foundational triad: HTML, CSS, and JavaScript. I believe
+            mastering these fundamentals is key to building robust and
+            performant web experiences.
+          </p>
+        </div>
+      </section>
+
+      <section id="tech-stack">
+        <div class="container content">
+          <h2>Tech Stack</h2>
+
+          <div class="skill-grid">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>REST APIs</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="favorites">
+        <div class="container content">
+          <h2>Favorites Projects</h2>
+
+          <div id="favorites" class="favorites-grid"></div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container content">
+          <h2>Projects</h2>
+
+          <div class="search-wrap">
+            <input id="search" type="search" placeholder="Search projects..." />
+          </div>
+
+          <div id="filters" class="filters"></div>
+
+          <div id="grid" class="project-grid"></div>
+
+          <p id="empty" class="empty" hidden>No projects found.</p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container content">
+          <h2>Contact</h2>
+
+          <p>
+            Feel free to connect with me. I'm always open to discussing new
+            projects, creative ideas, or opportunities to be part of your
+            vision.
+          </p>
+
+          <div class="social-links">
+            <a
+              href="https://github.com/felipev-gil"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/felipev-gil/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://www.instagram.com/felipeee_gil/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+
+            <a href="mailto:felipevanegas2012@hotmail.com"> Email </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-component"></div>
+
+    <script src="./Shared/script.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

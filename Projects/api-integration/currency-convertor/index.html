@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    </script>
+    <link rel="icon" href="../../../assets/favicon.ico" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="header-component"></div>
+
+    <main>
+      <section class="container content">
+        <h2>Currency Converter</h2>
+        <div class="converter">
+          <div class="card">
+            <div class="field">
+              <label for="amount"> Amount </label>
+
+              <input
+                id="amount"
+                type="number"
+                min="0"
+                max="999999999"
+                value="1"
+              />
+            </div>
+
+            <div class="field">
+              <label for="from"> From </label>
+
+              <select id="from"></select>
+            </div>
+
+            <div class="btn">
+              <button id="swap" class="swap-btn" aria-label="Swap currencies">
+                ⇅
+              </button>
+            </div>
+
+            <div class="field">
+              <label for="to"> To </label>
+              <select id="to"></select>
+            </div>
+
+            <button id="convert" class="convert-btn">Convert</button>
+
+            <div id="result" class="result">Select currencies and convert.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-component"></div>
+
+    <script src="../../../Shared/script.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

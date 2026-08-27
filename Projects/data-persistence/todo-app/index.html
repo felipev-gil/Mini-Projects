@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    </script>
+    <link rel="icon" href="../../../assets/favicon.ico" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="header-component"></div>
+
+    <main>
+      <section class="container content">
+        <h2>My Tasks</h2>
+        <div class="todo-app">
+          <div class="card">
+            <div class="todo-input">
+              <input
+                type="text"
+                id="task-input"
+                placeholder="What do you need to do?"
+              />
+              <button id="add-task"></button>
+            </div>
+
+            <div class="filters">
+              <span class="filter active" data-filter="all"> All </span>
+              <span class="filter" data-filter="active"> Active </span>
+              <span class="filter" data-filter="completed"> Completed </span>
+            </div>
+
+            <div class="todos-container">
+              <ul id="todos-list">
+              <div class="empty-state hidden">
+                <i class="fas fa-clipboard-list"></i>
+                <p>No tasks here yet</p>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <p id="items-left">0 items left</p>
+              <button id="clear-completed">Clear completed</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-component"></div>
+
+    <script src="../../../Shared/script.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

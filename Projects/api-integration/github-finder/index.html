@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitHub Finder · Mini Projects</title>
+    <meta
+      name="description"
+      content="Explore a public GitHub profile and its six most recently updated repositories."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>GitHub Finder</h1>
+      <p class="intro">
+        Explore a public GitHub profile and its six most recently updated
+        repositories.
+      </p>
+      <form id="search-form" class="panel">
+        <label for="query">GitHub username</label
+        ><input id="query" value="felipev-gil" required maxlength="39" />
+        <div class="actions">
+          <button id="search" class="primary">Search</button>
+        </div>
+      </form>
+      <div id="profile"></div>
+      <h2 id="repos-heading" hidden>Recent repositories</h2>
+      <div id="repos" class="results"></div>
+      <p class="note">
+        Uses the public
+        <a href="https://docs.github.com/en/rest">GitHub REST API</a>.
+        Unauthenticated requests are rate limited; no token is included.
+      </p>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Github%20Finder/index.html"
+          >Github Finder example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

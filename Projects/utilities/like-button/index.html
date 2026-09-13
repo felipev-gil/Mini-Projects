@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Like Button · Mini Projects</title>
+    <meta
+      name="description"
+      content="Toggle an animated heart with a click, tap, or keyboard press."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Like Button</h1>
+      <p class="intro">
+        Toggle an animated heart with a click, tap, or keyboard press.
+      </p>
+      <div class="panel">
+        <button id="heart" aria-pressed="false" aria-label="Like this demo">
+          ♡
+        </button>
+        <p>
+          This is a local interaction demo; likes are not saved or sent
+          anywhere.
+        </p>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Likes/index.html">Likes example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

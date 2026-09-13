@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pokémon Viewer · Mini Projects</title>
+    <meta
+      name="description"
+      content="Search for a Pokémon by name or ID, or discover a random one and its stats."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Pokémon Viewer</h1>
+      <p class="intro">
+        Search for a Pokémon by name or ID, or discover a random one and its
+        stats.
+      </p>
+      <form id="search-form" class="panel">
+        <label for="query">Pokémon name or ID</label
+        ><input id="query" value="pikachu" required maxlength="80" />
+        <div class="actions">
+          <button id="search" class="primary">Search</button
+          ><button id="random" type="button">Random Pokémon</button>
+        </div>
+        <div class="actions" id="suggestions">
+          <button type="button" data-name="charizard">charizard</button
+          ><button type="button" data-name="mewtwo">mewtwo</button
+          ><button type="button" data-name="eevee">eevee</button
+          ><button type="button" data-name="gengar">gengar</button
+          ><button type="button" data-name="snorlax">snorlax</button>
+        </div>
+      </form>
+      <div id="results"></div>
+      <p class="note">
+        Data from <a href="https://pokeapi.co">PokéAPI</a>. Random selection
+        uses IDs 1–1025; name searches can find other available entries.
+      </p>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Pokemon/index.html"
+          >Pokemon example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

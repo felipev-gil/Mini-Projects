@@ -1,0 +1,12 @@
+.mini-app .emoji-board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 580px;
+  margin: 24px auto;
+}
+.mini-app .target {
+  padding: 0;
+  aspect-ratio: 1;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}

@@ -1,168 +1,61 @@
-// ==================================================
-// THEME
-// ==================================================
-
-function initTheme() {
-  const savedTheme = localStorage.getItem("theme") || "dark";
-
-  document.documentElement.setAttribute("data-theme", savedTheme);
-
-  updateThemeIcon(savedTheme);
-
-  themeButton?.addEventListener("click", toggleTheme);
-}
-
-function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-  document.documentElement.setAttribute("data-theme", newTheme);
-
-  localStorage.setItem("theme", newTheme);
-
-  updateThemeIcon(newTheme);
-}
-
-function updateThemeIcon(theme) {
-  if (!themeButton) {
-    return;
+(() => {
+  const root = new URL("../", document.currentScript.src);
+  let theme = "dark";
+  try {
+    theme = localStorage.getItem("theme") === "light" ? "light" : "dark";
+  } catch {}
+  document.documentElement.dataset.theme = theme;
+  function initialize() {
+    const header = document.getElementById("header-component");
+    const footer = document.getElementById("footer-component");
+    if (header) {
+      header.innerHTML =
+        '<header class="site-header"><a class="skip-link" href="#main">Skip to content</a><div class="site-header-inner"><a class="site-brand"><img width="56" height="56" alt=""/><span>Mini Projects</span></a><nav aria-label="Main navigation"></nav><button id="theme-toggle" type="button"></button></div></header>';
+      header.querySelector(".site-brand").href = new URL("index.html", root);
+      header.querySelector("img").src = new URL("Assets/logo.svg", root);
+      const nav = header.querySelector("nav");
+      const links = document.body.classList.contains("portfolio")
+        ? [
+            ["About", "about"],
+            ["Favorites", "favorites"],
+            ["Projects", "projects"],
+            ["Contact", "contact"],
+          ]
+        : [["← Back to Portfolio", "projects"]];
+      for (const [title, hash] of links) {
+        const link = document.createElement("a");
+        link.textContent = title;
+        link.href = new URL("index.html#" + hash, root);
+        nav.append(link);
+      }
+      const button = header.querySelector("button");
+      function updateButton() {
+        button.textContent = theme === "dark" ? "☀ Light" : "☾ Dark";
+        button.setAttribute(
+          "aria-label",
+          "Switch to " + (theme === "dark" ? "light" : "dark") + " theme",
+        );
+      }
+      button.addEventListener("click", () => {
+        theme = theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = theme;
+        try {
+          localStorage.setItem("theme", theme);
+        } catch {}
+        updateButton();
+      });
+      updateButton();
+    }
+    if (footer) {
+      const p = document.createElement("p");
+      p.textContent =
+        "© " +
+        new Date().getFullYear() +
+        " Felipe · Built with HTML, CSS & JavaScript";
+      footer.replaceChildren(p);
+    }
   }
-
-  themeButton.textContent = theme === "dark" ? "☀️" : "🌙";
-}
-
-// ==================================================
-// SHARED COMPONENT PATH
-// ==================================================
-
-const sharedComponentBaseUrl = (() => {
-  const currentScript =
-    document.currentScript ||
-    document.querySelector('script[src$="Shared/script.js"]');
-  if (!currentScript?.src) {
-    return new URL(".", window.location.href).href;
-  }
-  return new URL(".", currentScript.src).href;
+  if (document.readyState === "loading")
+    document.addEventListener("DOMContentLoaded", initialize);
+  else initialize();
 })();
-
-function shouldRewriteUrl(value) {
-  if (!value || value.startsWith("#") || value.startsWith("//")) {
-    return false;
-  }
-  return !/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(value);
-}
-
-function rewriteComponentUrls(fragment, baseUrl) {
-  const elements = fragment.querySelectorAll("[href], [src]");
-  elements.forEach((element) => {
-    ["href", "src"].forEach((attr) => {
-      const value = element.getAttribute(attr);
-      if (shouldRewriteUrl(value)) {
-        element.setAttribute(attr, new URL(value, baseUrl).href);
-      }
-    });
-  });
-}
-
-function renderHeaderNav() {
-  const nav =
-    document.querySelector("#header-component .nav") ||
-    document.querySelector("header .nav");
-  if (!nav) {
-    return;
-  }
-
-  const isProjectPage = window.location.pathname.includes("/Projects/");
-  if (isProjectPage) {
-    nav.innerHTML = `<a href="${new URL("../index.html#projects", sharedComponentBaseUrl).href}">Back to Portfolio</a>`;
-  }
-}
-
-function ensureSharedStylesheet() {
-  const existingLink = Array.from(
-    document.head.querySelectorAll('link[rel="stylesheet"]'),
-  ).find(
-    (link) =>
-      link.href.includes("/Shared/style.css") ||
-      link.href.includes("Shared/style.css"),
-  );
-
-  if (!existingLink) {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = new URL("style.css", sharedComponentBaseUrl).href;
-    document.head.appendChild(link);
-  }
-}
-
-function loadSharedComponent(fileName, elementId, callback) {
-  ensureSharedStylesheet();
-
-  fetch(new URL(fileName, sharedComponentBaseUrl))
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Error loading ${fileName}: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then((data) => {
-      const template = document.createElement("template");
-      template.innerHTML = data.trim();
-      rewriteComponentUrls(template.content, sharedComponentBaseUrl);
-
-      const container = document.getElementById(elementId);
-      if (!container) {
-        throw new Error(`The item with id was not found ${elementId}`);
-      }
-      container.innerHTML = "";
-      container.appendChild(template.content);
-      callback?.();
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
-
-// ==================================================
-// HEADER COMPONENT
-// ==================================================
-
-loadSharedComponent("header.html", "header-component", () => {
-  renderHeaderNav();
-  themeButton = document.getElementById("theme-toggle");
-  initTheme();
-
-  setTimeout(scrollToHashTarget, 100);
-});
-
-// ==================================================
-// FOOTER COMPONENT
-// ==================================================
-
-loadSharedComponent("footer.html", "footer-component");
-
-// ==================================================
-// HASH SCROLL FIX
-// ==================================================
-
-function scrollToHashTarget() {
-  const hash = window.location.hash;
-  if (!hash) {
-    return;
-  }
-
-  const id = hash.substring(1);
-  const target = document.getElementById(id);
-  if (!target) {
-    return;
-  }
-
-  const headerHeight = document.querySelector("header")?.offsetHeight || 0;
-  const offset = headerHeight + 16;
-  const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-  window.scrollTo({ top, behavior: "auto" });
-}
-
-window.addEventListener("hashchange", scrollToHashTarget);

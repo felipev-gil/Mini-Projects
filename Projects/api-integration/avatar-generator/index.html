@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Avatar Generator · Mini Projects</title>
+    <meta
+      name="description"
+      content="Turn a name into a repeatable avatar and try six illustration styles."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Avatar Generator</h1>
+      <p class="intro">
+        Turn a name into a repeatable avatar and try six illustration styles.
+      </p>
+      <form id="avatar-form" class="panel">
+        <label for="seed">Name or seed</label
+        ><input id="seed" value="Felipe" maxlength="100" />
+        <div id="styles" class="actions">
+          <button type="button" data-style="lorelei" aria-pressed="true">
+            lorelei</button
+          ><button type="button" data-style="pixel-art" aria-pressed="false">
+            pixel-art</button
+          ><button type="button" data-style="bottts" aria-pressed="false">
+            bottts</button
+          ><button type="button" data-style="avataaars" aria-pressed="false">
+            avataaars</button
+          ><button type="button" data-style="adventurer" aria-pressed="false">
+            adventurer</button
+          ><button type="button" data-style="big-smile" aria-pressed="false">
+            big-smile
+          </button>
+        </div>
+        <button id="generate" class="primary">Generate avatar</button>
+        <div id="result"></div>
+        <p class="note">
+          The seed is sent to <a href="https://www.dicebear.com">DiceBear</a>.
+          Styles retain their creators’ licenses; see
+          <a href="https://www.dicebear.com/styles/"
+            >style attribution and licenses</a
+          >.
+        </p>
+      </form>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Avatar%20Generator/index.html"
+          >Avatar Generator example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

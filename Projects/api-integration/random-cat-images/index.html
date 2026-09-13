@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random Cat Images · Mini Projects</title>
+    <meta
+      name="description"
+      content="Request a random cat photo and replace it with another whenever you like."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Random Cat Images</h1>
+      <p class="intro">
+        Request a random cat photo and replace it with another whenever you
+        like.
+      </p>
+      <div class="panel">
+        <button id="generate" class="primary">Get random cat</button>
+        <div id="result"></div>
+        <p class="note">
+          Images from <a href="https://thecatapi.com">The Cat API</a>.
+        </p>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Random%20Cat%20Images/index.html"
+          >Random Cat Images example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

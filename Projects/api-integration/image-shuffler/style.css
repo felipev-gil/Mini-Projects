@@ -1,0 +1,5 @@
+.mini-app #images img {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  margin-bottom: 12px;
+}

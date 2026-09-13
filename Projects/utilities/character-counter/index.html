@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Character Counter · Mini Projects</title>
+    <meta
+      name="description"
+      content="Write a short message and see how much of a 280-character limit you have used."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Character Counter</h1>
+      <p class="intro">
+        Write a short message and see how much of a 280-character limit you have
+        used.
+      </p>
+      <div class="panel">
+        <label for="text">Your message</label
+        ><textarea id="text" maxlength="280"></textarea>
+        <p><output id="count">0</output> / 280</p>
+        <div class="meter"><div id="progress"></div></div>
+        <p class="note">
+          Uses the browser’s UTF-16 length, so some emoji count as two or more
+          units.
+        </p>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Character%20Counter/index.html"
+          >Character Counter example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

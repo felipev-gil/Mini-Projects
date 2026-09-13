@@ -1,0 +1,18 @@
+.mini-app .kanban {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.mini-app .column {
+  padding: 16px;
+  min-height: 220px;
+}
+.mini-app .column .result-card {
+  margin: 12px 0;
+  background: var(--primary-bg);
+}
+@media (max-width: 700px) {
+  .mini-app .kanban {
+    grid-template-columns: 1fr;
+  }
+}

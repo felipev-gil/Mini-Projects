@@ -1,0 +1,15 @@
+.mini-app #arena {
+  height: 320px;
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--secondary-border);
+  border-radius: 12px;
+  background: var(--primary-bg);
+}
+.mini-app #shape {
+  position: absolute;
+  padding: 0;
+  min-height: 44px;
+  background: var(--secondary-color);
+  border: 3px solid var(--primary-content);
+}

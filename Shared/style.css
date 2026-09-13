@@ -1,244 +1,137 @@
-/* ==================================================
-  VARIABLES
-================================================== */
-
 :root {
+  color-scheme: dark;
   --primary-bg: #0e1116;
-  --primary-bg-opacity: #0e1116bb;
-
-  --primary-border: #ffffff;
-  --secondary-border: #35383b;
-
-  --primary-content: #ffffff;
-  --secondary-content: #c4bcbc;
-
-  --primary-color: #7c5cff;
-  --primary-color-opacity: #7c5cff;
-
-  --secondary-color: #38d9a9;
-  --secondary-color-opacity: #38d9a91c;
-
-  --shadow: 0 10px 30px #010101;
-
-  --radius: 15px;
-
-  --max-width: 1200px;
-
-  --font-body: "Inter", sans-serif;
+  --bg-card: #181d26;
+  --primary-content: #f5f5fa;
+  --secondary-content: #bfc4d0;
+  --primary-color: #b09aff;
+  --secondary-color: #67e5be;
+  --secondary-border: #454b59;
+  --control-border: #7e8797;
+  --primary-border: #b09aff;
+  --radius: 16px;
+  --shadow: 0 8px 24px #0002;
 }
-
-/* ==================================================
-  LIGHT THEME
-================================================== */
-
-[data-theme="light"] {
-  --primary-bg: #ffffff;
-  --primary-bg-opacity: #ffffff67;
-
-  --primary-border: #0e1116;
-  --secondary-border: #83878d;
-
-  --primary-content: #111827;
-  --secondary-content: #6b7280;
-
-  --secondary-color: #d90054;
-  --secondary-color-opacity: #d900541c;
-
-  --shadow: 0 10px 25px #a3a3a3;
+:root[data-theme="light"] {
+  color-scheme: light;
+  --primary-bg: #f8f9fc;
+  --bg-card: #fff;
+  --primary-content: #192030;
+  --secondary-content: #505969;
+  --primary-color: #6340c4;
+  --secondary-color: #136e56;
+  --secondary-border: #a8afbe;
+  --control-border: #737d8f;
+  --primary-border: #6340c4;
 }
-
-/* ==================================================
-  SHARED LAYOUT
-================================================== */
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 40px;
-  min-height: 100%;
-  height: 100%;
-}
-
-body {
-  min-height: 100vh;
-  min-height: 100%;
-  line-height: 1.7;
-  color: var(--primary-content);
+/* Shell rules are scoped. Projects opt into project.css separately. */
+body.portfolio,
+body.project-page {
+  margin: 0;
   background: var(--primary-bg);
-  font-family: var(--font-body);
+  color: var(--primary-content);
+  font:
+    16px/1.65 system-ui,
+    sans-serif;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding-top: 75px;
-}
-
+#header-component,
 #footer-component {
-  margin-top: auto;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-h1 {
+  font:
+    16px/1.5 system-ui,
+    sans-serif;
   color: var(--primary-content);
 }
-
-h2 {
-  color: var(--primary-color);
+#header-component *,
+#footer-component * {
+  box-sizing: border-box;
 }
-
-a {
+.site-header {
+  border-bottom: 1px solid var(--secondary-border);
+  background: var(--primary-bg);
+}
+.site-header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.25rem;
+  font-weight: 750;
+  margin-right: auto;
+}
+.site-header a {
   color: inherit;
   text-decoration: none;
 }
-
-section {
-  padding: 2rem 0;
-}
-
-:target::before {
-  content: "";
-  display: block;
-  height: 120px;
-  margin-top: -120px;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.container {
-  width: min(var(--max-width), 90%);
-  margin-inline: auto;
-}
-
-.content {
-  text-align: center;
-}
-
-/* ==================================================
-  HEADER
-================================================== */
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  border-bottom: 1px solid var(--secondary-border);
-  background: var(--primary-bg-opacity);
-  backdrop-filter: blur(15px);
-}
-
-.header-inner {
-  min-height: 75px;
+.site-header nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.logo {
-  width: 42px;
-  height: 42px;
-}
-
-.logo-text {
-  font-weight: 700;
-  font-size: 1.15rem;
-}
-
-.nav {
-  display: flex;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  gap: 2rem;
-}
-
-.nav a {
-  color: var(--primary-content);
-  font-weight: 600;
-}
-
-.nav a:hover {
+.site-header nav a:hover {
   color: var(--primary-color);
 }
-
-.theme-btn {
-  width: 46px;
-  height: 46px;
-  border: 1.5px solid var(--secondary-border);
-  border-radius: 100%;
+#theme-toggle {
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid var(--secondary-border);
+  border-radius: 24px;
+  color: inherit;
+  background: var(--bg-card);
+  font: inherit;
   cursor: pointer;
-  background: var(--primary-bg);
 }
-
-.theme-btn:hover {
-  transform: rotate(15deg);
-}
-
-/* ==================================================
-  FOOTER
-================================================== */
-
-footer {
+#footer-component {
   text-align: center;
+  padding: 24px;
   border-top: 1px solid var(--secondary-border);
   margin-top: auto;
 }
-
-/* ==================================================
-  RESPONSIVE
-================================================== */
-
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  background: var(--bg-card);
+  padding: 12px;
+  z-index: 10;
 }
-
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-
-  .nav {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  main {
-    padding-top: 140px;
-  }
+.skip-link:focus {
+  top: 8px;
 }
-
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr;
+:where(.portfolio, .project-page) :focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 4px;
+}
+@media (max-width: 640px) {
+  .site-header-inner {
+    gap: 12px;
+    padding: 12px 16px;
   }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .social-links a {
+  .site-header nav {
+    order: 3;
     width: 100%;
-    text-align: center;
+    gap: 16px;
   }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+#theme-toggle {
+  border-color: var(--control-border);
 }

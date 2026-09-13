@@ -2,97 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currency Converter</title>
-    <script>
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        document.documentElement.setAttribute("data-theme", savedTheme);
-      }
-    </script>
-    <script
-      src="https://kit.fontawesome.com/e851598592.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="icon" href="../../../assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Password Generator · Mini Projects</title>
+    <meta
+      name="description"
+      content="Generate passwords with browser cryptographic randomness and your chosen character groups."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
     <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <div id="header-component"></div>
-
-    <main>
-      <section class="container content">
-        <h2>Password Generator</h2>
-        <div class="password-generator">
-          <div class="card">
-            <div class="card-sections">
-              <div class="password-container">
-                <input type="text" readonly id="password" />
-                <i
-                  class="fa-solid fa-copy fa-lg"
-                  id="copy-btn"
-                  title="Copy to clipboard"
-                ></i>
-              </div>
-            </div>
-
-            <div class="card-sections">
-              <div class="options">
-                <div class="option">
-                  <label for="length">Password Length</label>
-                  <div class="range-container">
-                    <input
-                      type="range"
-                      id="length"
-                      min="6"
-                      max="24"
-                      value="12"
-                    />
-                    <span id="length-value">12</span>
-                  </div>
-                </div>
-                <div class="option">
-                  <label for="uppercase">Include Uppercase</label>
-                  <input type="checkbox" id="uppercase" checked />
-                </div>
-                <div class="option">
-                  <label for="lowercase">Include Lowercase</label>
-                  <input type="checkbox" id="lowercase" checked />
-                </div>
-                <div class="option">
-                  <label for="numbers">Include Numbers</label>
-                  <input type="checkbox" id="numbers" checked />
-                </div>
-                <div class="option">
-                  <label for="symbols">Include Symbols</label>
-                  <input type="checkbox" id="symbols" checked />
-                </div>
-              </div>
-            </div>
-
-            <div class="card-sections">
-              <button id="generate-btn">
-                Generate Password
-                <i class="fas fa-key"></i>
-              </button>
-            </div>
-
-            <div class="strength-container">
-              <p>Password Strength: <span id="strength-label">Medium</span></p>
-              <div class="strength-meter">
-                <div class="strength-bar"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div id="footer-component"></div>
-
     <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Password Generator</h1>
+      <p class="intro">
+        Generate passwords with browser cryptographic randomness and your chosen
+        character groups.
+      </p>
+      <div class="panel">
+        <label for="password">Generated password</label
+        ><input id="password" readonly autocomplete="off" />
+        <div class="actions"><button id="copy">Copy password</button></div>
+        <label for="length">Length: <output id="length-value">16</output></label
+        ><input type="range" id="length" min="6" max="64" value="16" />
+        <div class="choices">
+          <label
+            ><input type="checkbox" id="uppercase" checked />uppercase</label
+          ><label
+            ><input type="checkbox" id="lowercase" checked />lowercase</label
+          ><label><input type="checkbox" id="numbers" checked />numbers</label
+          ><label><input type="checkbox" id="symbols" checked />symbols</label>
+        </div>
+        <button id="generate" class="primary">Generate password</button>
+        <p class="note">
+          Includes at least one character from each selected group. Uses
+          crypto.getRandomValues with rejection sampling. This does not check
+          leaked passwords or guarantee account security; longer, unique
+          passwords are preferable.
+        </p>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

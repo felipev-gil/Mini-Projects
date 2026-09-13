@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Currency Converter · Mini Projects</title>
+    <meta
+      name="description"
+      content="Convert an amount using the latest published exchange rates from ExchangeRate-API."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Currency Converter</h1>
+      <p class="intro">
+        Convert an amount using the latest published exchange rates from
+        ExchangeRate-API.
+      </p>
+      <form id="convert-form" class="panel">
+        <label for="amount">Amount (0 to 999,999,999)</label
+        ><input
+          id="amount"
+          type="number"
+          min="0"
+          max="999999999"
+          step="any"
+          value="1"
+          required
+        />
+        <div class="row">
+          <div class="field">
+            <label for="from">From</label
+            ><select id="from"></select>
+          </div>
+          <button id="swap" type="button">Swap currencies</button>
+          <div class="field">
+            <label for="to">To</label
+            ><select id="to"></select>
+          </div>
+        </div>
+        <div class="actions">
+          <button id="convert" class="primary">Convert</button>
+        </div>
+        <p class="note">
+          Indicative rates, not a bank quote.
+          <a href="https://www.exchangerate-api.com"
+            >Rates by ExchangeRate-API</a
+          >.
+        </p>
+      </form>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

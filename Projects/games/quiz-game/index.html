@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Game · Mini Projects</title>
+    <meta
+      name="description"
+      content="Answer five general-knowledge questions, see feedback, and try for a better score."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Quiz Game</h1>
+      <p class="intro">
+        Answer five general-knowledge questions, see feedback, and try for a
+        better score.
+      </p>
+      <div class="panel">
+        <button id="start" class="primary">Start quiz</button>
+        <div id="quiz" hidden>
+          <p id="position"></p>
+          <h2 id="question" tabindex="-1"></h2>
+          <div id="answers" class="actions"></div>
+          <p id="feedback" role="status"></p>
+          <button id="next" hidden>Next question</button>
+          <div class="meter"><div id="progress"></div></div>
+        </div>
+        <div id="result" hidden>
+          <h2>Quiz results</h2>
+          <p id="score" class="readout"></p>
+        </div>
+        <div class="actions"><button id="reset">Restart quiz</button></div>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Quiz%20Game/index.html"
+          >Quiz Game example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

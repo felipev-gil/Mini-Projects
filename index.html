@@ -9,22 +9,16 @@
       content="A collection of frontend mini projects built with HTML, CSS, and JavaScript."
     />
 
-    <script>
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        document.documentElement.setAttribute("data-theme", savedTheme);
-      }
-    </script>
-
-    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="icon" href="./Assets/favicon.svg" />
     <link rel="stylesheet" href="./Shared/style.css" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="./Shared/script.js"></script>
   </head>
 
-  <body>
+  <body class="portfolio">
     <div id="header-component"></div>
 
-    <main>
+    <main id="main">
       <section class="hero">
         <div class="container content">
           <p class="eyebrow">Web Developer Portfolio</p>
@@ -35,9 +29,9 @@
           </h1>
 
           <p class="hero-text">
-            A curated collection of practical web applications built to hone
-            problem-solving skills and master modern front-end development
-            techniques using HTML, CSS, and JavaScript.
+            I’m Felipe, a junior developer learning by building. Explore my
+            small tools, games, and API experiments, made with HTML, CSS, and
+            JavaScript.
           </p>
         </div>
       </section>
@@ -47,19 +41,15 @@
           <h2>About Me</h2>
 
           <p class="about-text">
-            I thrive on building small, focused applications that address
-            tangible problems and continually expand my development toolkit.
-            These projects allow me to dive deep into core web concepts,
-            including DOM manipulation, complex API integration, state
-            management using local storage, responsive design implementation,
-            and modern JavaScript practices.
+            I use these projects to practice working with the DOM, validating
+            input, fetching data, and saving state in the browser. Each one
+            gives me a focused problem to solve.
           </p>
 
           <p class="about-text">
-            While I am always exploring new frameworks, I maintain a passion for
-            the foundational triad: HTML, CSS, and JavaScript. I believe
-            mastering these fundamentals is key to building robust and
-            performant web experiences.
+            I’m still learning. This collection shows my progress with the
+            fundamentals and the improvements I make as I test and revisit my
+            work.
           </p>
         </div>
       </section>
@@ -79,9 +69,9 @@
 
       <section id="favorites">
         <div class="container content">
-          <h2>Favorites Projects</h2>
+          <h2>Favorite Projects</h2>
 
-          <div id="favorites" class="favorites-grid"></div>
+          <div id="favorites-grid" class="favorites-grid"></div>
         </div>
       </section>
 
@@ -90,14 +80,21 @@
           <h2>Projects</h2>
 
           <div class="search-wrap">
-            <input id="search" type="search" placeholder="Search projects..." />
+            <label for="search">Search projects</label
+            ><input
+              id="search"
+              type="search"
+              placeholder="Search projects..."
+            />
           </div>
 
           <div id="filters" class="filters"></div>
 
           <div id="grid" class="project-grid"></div>
 
-          <p id="empty" class="empty" hidden>No projects found.</p>
+          <p id="empty" role="status" class="empty" hidden>
+            No projects match. Try another search or choose All.
+          </p>
         </div>
       </section>
 
@@ -106,9 +103,9 @@
           <h2>Contact</h2>
 
           <p>
-            Feel free to connect with me. I'm always open to discussing new
-            projects, creative ideas, or opportunities to be part of your
-            vision.
+            Have feedback on a project or an opportunity for a junior developer?
+            I’d be glad to hear from you. You can find my code on GitHub or
+            contact me by email.
           </p>
 
           <div class="social-links">
@@ -144,7 +141,6 @@
 
     <div id="footer-component"></div>
 
-    <script src="./Shared/script.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

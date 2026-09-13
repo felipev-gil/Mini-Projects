@@ -1,38 +1,228 @@
 [
   {
     "title": "Currency Converter",
-    "description": "Convert currencies using real-time exchange rates from a public API.",
+    "description": "Convert an amount using the latest published exchange rates from ExchangeRate-API.",
     "category": "API Integration",
     "emoji": "💱",
-    "url": "Projects/api-integration/currency-convertor/index.html",
-    "tags": ["api", "currency", "exchange rates", "finance", "money"],
+    "url": "Projects/api-integration/currency-converter/index.html",
+    "tags": ["currency", "exchange rates", "api"],
     "favorite": true
   },
   {
     "title": "Todo App",
-    "description": "A simple todo app to organize your thoughts and ideas.",
+    "description": "Add, complete, and filter tasks saved in this browser.",
     "category": "Data Persistence",
     "emoji": "📝",
-    "url": "Projects/data-persistence/todo-app",
-    "tags": ["data", "todo", "app", "notes", "tasks"],
+    "url": "Projects/data-persistence/todo-app/index.html",
+    "tags": ["tasks", "local storage", "todo"],
     "favorite": true
   },
   {
     "title": "Tic Tac Toe",
-    "description": "Play the fun and classic Tic Tac Toe game with a friend.",
+    "description": "Play a two-player game on one device, then reset for another round.",
     "category": "Games",
     "emoji": "❌⭕",
     "url": "Projects/games/tic-tac-toe/index.html",
-    "tags": ["game", "tic tac toe", "fun"],
+    "tags": ["board game", "two players"],
     "favorite": true
   },
   {
     "title": "Password Generator",
-    "description": "Generate secure passwords with customizable options.",
+    "description": "Generate passwords with browser cryptographic randomness and your chosen character groups.",
     "category": "Utilities",
     "emoji": "🔑",
     "url": "Projects/utilities/password-generator/index.html",
-    "tags": ["utilities", "security", "password", "generator"],
+    "tags": ["password", "randomness", "security"],
+    "favorite": false
+  },
+  {
+    "title": "Character Counter",
+    "description": "Write a short message and see how much of a 280-character limit you have used.",
+    "category": "Utilities",
+    "emoji": "🛠️",
+    "url": "Projects/utilities/character-counter/index.html",
+    "tags": ["text", "characters", "counter"],
+    "favorite": false
+  },
+  {
+    "title": "Word Counter",
+    "description": "Count words, Unicode letters, and whitespace characters in your text.",
+    "category": "Utilities",
+    "emoji": "🛠️",
+    "url": "Projects/utilities/word-counter/index.html",
+    "tags": ["text", "words", "counter"],
+    "favorite": false
+  },
+  {
+    "title": "Text Formatter",
+    "description": "Change text case and toggle bold, italic, or underline in a live preview.",
+    "category": "Utilities",
+    "emoji": "🛠️",
+    "url": "Projects/utilities/text-formatter/index.html",
+    "tags": ["text", "formatting", "case"],
+    "favorite": false
+  },
+  {
+    "title": "Stopwatch",
+    "description": "Measure elapsed time, pause and resume, or reset to start again.",
+    "category": "Utilities",
+    "emoji": "🛠️",
+    "url": "Projects/utilities/stopwatch/index.html",
+    "tags": ["timer", "time", "stopwatch"],
+    "favorite": false
+  },
+  {
+    "title": "Like Button",
+    "description": "Toggle an animated heart with a click, tap, or keyboard press.",
+    "category": "Utilities",
+    "emoji": "🛠️",
+    "url": "Projects/utilities/like-button/index.html",
+    "tags": ["animation", "interaction", "like"],
+    "favorite": false
+  },
+  {
+    "title": "Quote Generator",
+    "description": "Browse a local collection of quotations and copy one to your clipboard.",
+    "category": "Utilities",
+    "emoji": "🛠️",
+    "url": "Projects/utilities/quote-generator/index.html",
+    "tags": ["quotes", "random", "clipboard"],
+    "favorite": false
+  },
+  {
+    "title": "Password Strength Meter",
+    "description": "Explore a simple password checklist and show or hide the text you enter.",
+    "category": "Utilities",
+    "emoji": "🛠️",
+    "url": "Projects/utilities/password-strength-meter/index.html",
+    "tags": ["password", "validation", "checklist"],
+    "favorite": false
+  },
+  {
+    "title": "Kanban Board",
+    "description": "Move tasks between To Do, In Progress, and Done by dragging or using the move control.",
+    "category": "Utilities",
+    "emoji": "🛠️",
+    "url": "Projects/utilities/kanban-board/index.html",
+    "tags": ["drag and drop", "tasks", "kanban"],
+    "favorite": false
+  },
+  {
+    "title": "QR Code Generator",
+    "description": "Create a QR code from text or a URL and download it as a PNG image.",
+    "category": "Utilities",
+    "emoji": "🛠️",
+    "url": "Projects/utilities/qr-code-generator/index.html",
+    "tags": ["qr", "image", "download"],
+    "favorite": false
+  },
+  {
+    "title": "Quiz Game",
+    "description": "Answer five general-knowledge questions, see feedback, and try for a better score.",
+    "category": "Games",
+    "emoji": "🎮",
+    "url": "Projects/games/quiz-game/index.html",
+    "tags": ["quiz", "questions", "score"],
+    "favorite": false
+  },
+  {
+    "title": "Emoji Catcher",
+    "description": "Catch the moving emoji as many times as you can in a 60-second round.",
+    "category": "Games",
+    "emoji": "🎮",
+    "url": "Projects/games/emoji-catcher/index.html",
+    "tags": ["emoji", "reaction", "timer"],
+    "favorite": false
+  },
+  {
+    "title": "Shape Clicker",
+    "description": "Wait for a randomly sized shape, then click or tap it to measure your reaction time.",
+    "category": "Games",
+    "emoji": "🎮",
+    "url": "Projects/games/shape-clicker/index.html",
+    "tags": ["reaction", "shape", "timer"],
+    "favorite": false
+  },
+  {
+    "title": "Country Lookup",
+    "description": "Look up countries and explore their capitals, populations, currencies, and languages.",
+    "category": "API Integration",
+    "emoji": "🌐",
+    "url": "Projects/api-integration/country-lookup/index.html",
+    "tags": ["country", "geography", "search", "api"],
+    "favorite": false,
+    "status": "Live service unavailable"
+  },
+  {
+    "title": "Pokémon Viewer",
+    "description": "Search for a Pokémon by name or ID, or discover a random one and its stats.",
+    "category": "API Integration",
+    "emoji": "🌐",
+    "url": "Projects/api-integration/pokemon-viewer/index.html",
+    "tags": ["pokemon", "search", "random", "api"],
+    "favorite": false
+  },
+  {
+    "title": "GitHub Finder",
+    "description": "Explore a public GitHub profile and its six most recently updated repositories.",
+    "category": "API Integration",
+    "emoji": "🌐",
+    "url": "Projects/api-integration/github-finder/index.html",
+    "tags": ["github", "profile", "repositories", "api"],
+    "favorite": false
+  },
+  {
+    "title": "Avatar Generator",
+    "description": "Turn a name into a repeatable avatar and try six illustration styles.",
+    "category": "API Integration",
+    "emoji": "🌐",
+    "url": "Projects/api-integration/avatar-generator/index.html",
+    "tags": ["avatar", "image", "dicebear", "api"],
+    "favorite": false
+  },
+  {
+    "title": "Image Shuffler",
+    "description": "Browse a photo gallery, shuffle to a different page, and load more images with photographer credits.",
+    "category": "API Integration",
+    "emoji": "🌐",
+    "url": "Projects/api-integration/image-shuffler/index.html",
+    "tags": ["gallery", "photos", "picsum", "api"],
+    "favorite": false
+  },
+  {
+    "title": "Random Cat Images",
+    "description": "Request a random cat photo and replace it with another whenever you like.",
+    "category": "API Integration",
+    "emoji": "🌐",
+    "url": "Projects/api-integration/random-cat-images/index.html",
+    "tags": ["cats", "photos", "random", "api"],
+    "favorite": false
+  },
+  {
+    "title": "Random Meal Generator",
+    "description": "Discover a random meal with ingredients, cooking instructions, and an optional recipe video.",
+    "category": "API Integration",
+    "emoji": "🌐",
+    "url": "Projects/api-integration/random-meal-generator/index.html",
+    "tags": ["meal", "food", "random", "api"],
+    "favorite": false
+  },
+  {
+    "title": "Recipe Finder",
+    "description": "Search meals by name, then open a recipe for ingredients and cooking instructions.",
+    "category": "API Integration",
+    "emoji": "🌐",
+    "url": "Projects/api-integration/recipe-finder/index.html",
+    "tags": ["recipe", "food", "search", "api"],
+    "favorite": false
+  },
+  {
+    "title": "Random User",
+    "description": "Generate a fictional profile with a name, photo, address, phone number, and email.",
+    "category": "API Integration",
+    "emoji": "🌐",
+    "url": "Projects/api-integration/random-user/index.html",
+    "tags": ["random", "user", "profile", "api"],
     "favorite": false
   }
 ]

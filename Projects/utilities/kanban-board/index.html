@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kanban Board · Mini Projects</title>
+    <meta
+      name="description"
+      content="Move tasks between To Do, In Progress, and Done by dragging or using the move control."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Kanban Board</h1>
+      <p class="intro">
+        Move tasks between To Do, In Progress, and Done by dragging or using the
+        move control.
+      </p>
+      <p>
+        Drag a card to a column, or use its Move to menu on a keyboard or touch
+        screen. This demo resets on reload.
+      </p>
+      <div class="kanban">
+        <section class="panel column" id="column-0" aria-label="To Do">
+          <h2>To Do</h2>
+        </section>
+        <section class="panel column" id="column-1" aria-label="In Progress">
+          <h2>In Progress</h2>
+        </section>
+        <section class="panel column" id="column-2" aria-label="Done">
+          <h2>Done</h2>
+        </section>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Drag%20and%20Drop/index.html"
+          >Drag and Drop example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

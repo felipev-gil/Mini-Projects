@@ -1,0 +1,206 @@
+/* Explicit, opt-in baseline for integrated mini-projects. Never loaded by examples. */
+.mini-app {
+  box-sizing: border-box;
+  width: min(900px, calc(100% - 32px));
+  margin: 40px auto;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+.mini-app * {
+  box-sizing: border-box;
+}
+.mini-app h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.2;
+}
+.mini-app h2 {
+  font-size: 1.3rem;
+}
+.mini-app .intro,
+.mini-app .note {
+  color: var(--secondary-content);
+}
+.mini-app .panel {
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--secondary-border);
+  border-radius: var(--radius);
+  margin: 20px 0;
+}
+.mini-app label {
+  display: block;
+  margin: 12px 0 6px;
+}
+.mini-app input,
+.mini-app textarea,
+.mini-app select,
+.mini-app button {
+  font: inherit;
+  color: var(--primary-content);
+  background: var(--primary-bg);
+  border: 1px solid var(--secondary-border);
+  border-radius: 9px;
+  padding: 10px 14px;
+  min-height: 44px;
+  max-width: 100%;
+}
+.mini-app input:not([type="checkbox"]):not([type="range"]),
+.mini-app textarea,
+.mini-app select {
+  width: 100%;
+}
+.mini-app textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.mini-app button {
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    transform 0.15s;
+}
+.mini-app button:hover:not(:disabled) {
+  border-color: var(--primary-color);
+}
+.mini-app button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+.mini-app button.primary,
+.mini-app button[aria-pressed="true"] {
+  background: var(--primary-color);
+  color: var(--primary-bg);
+}
+.mini-app .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.mini-app .row > .field {
+  flex: 1 1 160px;
+}
+.mini-app .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+.mini-app .choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.mini-app .choices label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mini-app input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  min-height: 22px;
+  accent-color: var(--primary-color);
+}
+.mini-app [hidden] {
+  display: none !important;
+}
+.mini-app .status {
+  min-height: 1.65em;
+  white-space: pre-wrap;
+}
+.mini-app img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.mini-app a {
+  color: var(--primary-color);
+}
+.mini-app .results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: 16px;
+}
+.mini-app .result-card {
+  border: 1px solid var(--secondary-border);
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 0;
+}
+.mini-app .result-card img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+}
+.mini-app .meter {
+  height: 12px;
+  background: var(--secondary-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mini-app .meter > div {
+  height: 100%;
+  width: 0;
+  background: var(--primary-color);
+  transition: width 0.2s;
+}
+.mini-app .board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 420px;
+  margin: 20px auto;
+}
+.mini-app .cell {
+  aspect-ratio: 1;
+  font-size: 2rem;
+  padding: 0;
+}
+.mini-app .cell.win {
+  background: var(--secondary-color);
+  color: var(--primary-bg);
+  opacity: 1;
+}
+.mini-app .task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--secondary-border);
+}
+.mini-app .task label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  margin: 0;
+  min-width: 0;
+}
+.mini-app .task.completed span {
+  text-decoration: line-through;
+}
+.mini-app ul.tasks {
+  list-style: none;
+  padding: 0;
+}
+.mini-app .readout {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  font-variant-numeric: tabular-nums;
+}
+.mini-app .formatted {
+  white-space: pre-wrap;
+  min-height: 80px;
+}
+@media (max-width: 480px) {
+  .mini-app {
+    margin: 24px auto;
+  }
+  .mini-app .panel {
+    padding: 16px;
+  }
+}
+.mini-app :is(input, textarea, select, button) {
+  border-color: var(--control-border);
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emoji Catcher · Mini Projects</title>
+    <meta
+      name="description"
+      content="Catch the moving emoji as many times as you can in a 60-second round."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Emoji Catcher</h1>
+      <p class="intro">
+        Catch the moving emoji as many times as you can in a 60-second round.
+      </p>
+      <div class="panel">
+        <p>
+          Score: <output id="score">0</output> · Time left:
+          <output id="time" role="timer">60</output>s
+        </p>
+        <div class="actions">
+          <button id="start" class="primary">Start / restart</button
+          ><button id="stop" disabled>End round</button>
+        </div>
+        <div class="emoji-board">
+          <button
+            class="target"
+            data-index="0"
+            aria-label="Position 1, empty"
+            disabled
+          ></button
+          ><button
+            class="target"
+            data-index="1"
+            aria-label="Position 2, empty"
+            disabled
+          ></button
+          ><button
+            class="target"
+            data-index="2"
+            aria-label="Position 3, empty"
+            disabled
+          ></button
+          ><button
+            class="target"
+            data-index="3"
+            aria-label="Position 4, empty"
+            disabled
+          ></button
+          ><button
+            class="target"
+            data-index="4"
+            aria-label="Position 5, empty"
+            disabled
+          ></button
+          ><button
+            class="target"
+            data-index="5"
+            aria-label="Position 6, empty"
+            disabled
+          ></button
+          ><button
+            class="target"
+            data-index="6"
+            aria-label="Position 7, empty"
+            disabled
+          ></button
+          ><button
+            class="target"
+            data-index="7"
+            aria-label="Position 8, empty"
+            disabled
+          ></button
+          ><button
+            class="target"
+            data-index="8"
+            aria-label="Position 9, empty"
+            disabled
+          ></button
+          ><button
+            class="target"
+            data-index="9"
+            aria-label="Position 10, empty"
+            disabled
+          ></button>
+        </div>
+        <p class="note">
+          Click, tap, or focus a position and press Enter or Space when the
+          emoji appears. Each appearance counts once.
+        </p>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Emoji%20Catcher%20Game/index.html"
+          >Emoji Catcher Game example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

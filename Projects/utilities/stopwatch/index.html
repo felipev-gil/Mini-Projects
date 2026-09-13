@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stopwatch · Mini Projects</title>
+    <meta
+      name="description"
+      content="Measure elapsed time, pause and resume, or reset to start again."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Stopwatch</h1>
+      <p class="intro">
+        Measure elapsed time, pause and resume, or reset to start again.
+      </p>
+      <div class="panel">
+        <div id="timer" class="readout" role="timer" aria-label="Elapsed time">
+          00:00.000
+        </div>
+        <div class="actions">
+          <button id="start" class="primary">Start</button
+          ><button id="stop" disabled>Pause</button
+          ><button id="reset">Reset</button>
+        </div>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Timer/index.html">Timer example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

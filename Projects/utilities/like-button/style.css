@@ -1,0 +1,16 @@
+.mini-app #heart {
+  display: block;
+  margin: 24px auto;
+  width: 140px;
+  height: 140px;
+  font-size: 5rem;
+  line-height: 1;
+  border: 0;
+  transition: transform 0.2s;
+  color: var(--primary-color);
+  background: transparent;
+}
+.mini-app #heart[aria-pressed="true"] {
+  color: #df3267;
+  transform: scale(1.1);
+}

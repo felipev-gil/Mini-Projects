@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image Shuffler · Mini Projects</title>
+    <meta
+      name="description"
+      content="Browse a photo gallery, shuffle to a different page, and load more images with photographer credits."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Image Shuffler</h1>
+      <p class="intro">
+        Browse a photo gallery, shuffle to a different page, and load more
+        images with photographer credits.
+      </p>
+      <div class="actions">
+        <button id="shuffle" class="primary">Shuffle images</button
+        ><button id="more">Load more</button>
+      </div>
+      <div id="images" class="results"></div>
+      <p class="note">
+        Photos from <a href="https://picsum.photos">Lorem Picsum</a>; each
+        photograph links to its credited source.
+      </p>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Image%20Shuffler/index.html"
+          >Image Shuffler example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

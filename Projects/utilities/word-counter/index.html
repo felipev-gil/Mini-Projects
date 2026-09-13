@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Word Counter · Mini Projects</title>
+    <meta
+      name="description"
+      content="Count words, Unicode letters, and whitespace characters in your text."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Word Counter</h1>
+      <p class="intro">
+        Count words, Unicode letters, and whitespace characters in your text.
+      </p>
+      <div class="panel">
+        <label for="text">Text to count</label><textarea id="text"></textarea>
+        <p>Words: <output id="words">0</output></p>
+        <p>Letters: <output id="letters">0</output></p>
+        <p>Whitespace characters: <output id="spaces">0</output></p>
+        <p class="note">
+          Words are groups of letters or numbers, including internal
+          apostrophes. Hyphens separate words; punctuation and emoji alone do
+          not count as words.
+        </p>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/World%20Counter/index.html"
+          >World Counter example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

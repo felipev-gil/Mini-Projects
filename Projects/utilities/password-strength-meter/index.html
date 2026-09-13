@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Password Strength Meter · Mini Projects</title>
+    <meta
+      name="description"
+      content="Explore a simple password checklist and show or hide the text you enter."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Password Strength Meter</h1>
+      <p class="intro">
+        Explore a simple password checklist and show or hide the text you enter.
+      </p>
+      <div class="panel">
+        <label for="password">Practice password</label
+        ><input id="password" type="password" autocomplete="off" />
+        <div class="actions">
+          <button id="toggle" aria-pressed="false">Show password</button>
+        </div>
+        <div class="meter"><div id="progress"></div></div>
+        <p id="score">0 of 5 checks met</p>
+        <ul id="checks"></ul>
+        <p class="note">
+          A learning exercise, not a security assessment. Common or leaked
+          passwords can pass all five checks. Nothing is stored, sent, or used
+          to create an account.
+        </p>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a
+          href="../../../Projects%20Examples/password-strength-meter/index.html"
+          >password-strength-meter example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

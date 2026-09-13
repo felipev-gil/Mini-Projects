@@ -2,62 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currency Converter</title>
-    <script>
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        document.documentElement.setAttribute("data-theme", savedTheme);
-      }
-    </script>
-    <link rel="icon" href="../../../assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo App · Mini Projects</title>
+    <meta
+      name="description"
+      content="Add, complete, and filter tasks saved in this browser."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
     <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <div id="header-component"></div>
-
-    <main>
-      <section class="container content">
-        <h2>My Tasks</h2>
-        <div class="todo-app">
-          <div class="card">
-            <div class="todo-input">
-              <input
-                type="text"
-                id="task-input"
-                placeholder="What do you need to do?"
-              />
-              <button id="add-task"></button>
-            </div>
-
-            <div class="filters">
-              <span class="filter active" data-filter="all"> All </span>
-              <span class="filter" data-filter="active"> Active </span>
-              <span class="filter" data-filter="completed"> Completed </span>
-            </div>
-
-            <div class="todos-container">
-              <ul id="todos-list">
-              <div class="empty-state hidden">
-                <i class="fas fa-clipboard-list"></i>
-                <p>No tasks here yet</p>
-              </div>
-            </div>
-
-            <div class="card-footer">
-              <p id="items-left">0 items left</p>
-              <button id="clear-completed">Clear completed</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div id="footer-component"></div>
-
     <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Todo App</h1>
+      <p class="intro">
+        Add, complete, and filter tasks saved in this browser.
+      </p>
+      <div class="panel">
+        <form id="add-form">
+          <label for="task-input">New task</label>
+          <div class="row">
+            <input id="task-input" maxlength="500" required /><button
+              class="primary"
+            >
+              Add task
+            </button>
+          </div>
+        </form>
+        <div class="actions" id="task-filters">
+          <button data-filter="all" aria-pressed="true">All</button
+          ><button data-filter="active" aria-pressed="false">Active</button
+          ><button data-filter="completed" aria-pressed="false">
+            Completed
+          </button>
+        </div>
+        <ul id="todos-list" class="tasks"></ul>
+        <p id="empty-state"></p>
+        <p id="items-left"></p>
+        <button id="clear-completed">Clear completed</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

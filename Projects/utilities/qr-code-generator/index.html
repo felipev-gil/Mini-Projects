@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QR Code Generator · Mini Projects</title>
+    <meta
+      name="description"
+      content="Create a QR code from text or a URL and download it as a PNG image."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>QR Code Generator</h1>
+      <p class="intro">
+        Create a QR code from text or a URL and download it as a PNG image.
+      </p>
+      <div class="panel">
+        <label for="text">Text or URL</label
+        ><textarea id="text" maxlength="500"></textarea
+        ><label for="size">Image size</label
+        ><select id="size">
+          <option value="200">200 × 200</option>
+          <option value="300">300 × 300</option>
+          <option value="400">400 × 400</option>
+        </select>
+        <div class="actions">
+          <button id="generate" class="primary">Generate QR code</button
+          ><button id="download" disabled>Download PNG</button>
+        </div>
+        <div id="qr"></div>
+        <p class="note">
+          Generated locally with QRCode.js by David Shim. Maximum 500 UTF-8
+          bytes. Keep the white margin when sharing or printing.
+        </p>
+      </div>
+      <script src="../../../Assets/vendor/qrcode.min.js"></script>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/QR%20Code%20Generator/index.html"
+          >QR Code Generator example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

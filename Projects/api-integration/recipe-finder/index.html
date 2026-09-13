@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recipe Finder · Mini Projects</title>
+    <meta
+      name="description"
+      content="Search meals by name, then open a recipe for ingredients and cooking instructions."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Recipe Finder</h1>
+      <p class="intro">
+        Search meals by name, then open a recipe for ingredients and cooking
+        instructions.
+      </p>
+      <form id="search-form" class="panel">
+        <label for="query">Meal name</label
+        ><input id="query" value="chicken" required maxlength="100" />
+        <div class="actions">
+          <button id="search" class="primary">Search recipes</button>
+        </div>
+      </form>
+      <div id="results" class="results"></div>
+      <section id="details" hidden tabindex="-1">
+        <button id="back">← Back to recipes</button>
+        <div id="meal"></div>
+      </section>
+      <p class="note">
+        Recipes from <a href="https://www.themealdb.com/api.php">TheMealDB</a>.
+      </p>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Recipe%20Finder/index.html"
+          >Recipe Finder example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

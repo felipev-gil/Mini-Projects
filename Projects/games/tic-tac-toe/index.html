@@ -2,55 +2,80 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currency Converter</title>
-    <script>
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        document.documentElement.setAttribute("data-theme", savedTheme);
-      }
-    </script>
-    <link rel="icon" href="../../../assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tic Tac Toe · Mini Projects</title>
+    <meta
+      name="description"
+      content="Play a two-player game on one device, then reset for another round."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
     <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <div id="header-component"></div>
-
-    <main>
-      <section class="container content">
-        <h2>Tic Tac Toe</h2>
-        <p>
-          Player 1: <span class="badge">X</span> | Player 2:
-          <span class="badge badge-o">O</span>
-        </p>
-        <div class="tic-tac-toe">
-          <div class="card">
-            <div class="status-bar">
-              <span class="status-text" id="statusText">Player 1 (X) turn</span>
-              <button id="resetBtn" class="reset-btn">Reset</button>
-            </div>
-
-            <div class="board">
-              <button class="cell" data-index="0"></button>
-              <button class="cell" data-index="1"></button>
-              <button class="cell" data-index="2"></button>
-              <button class="cell" data-index="3"></button>
-              <button class="cell" data-index="4"></button>
-              <button class="cell" data-index="5"></button>
-              <button class="cell" data-index="6"></button>
-              <button class="cell" data-index="7"></button>
-              <button class="cell" data-index="8"></button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div id="footer-component"></div>
-
     <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Tic Tac Toe</h1>
+      <p class="intro">
+        Play a two-player game on one device, then reset for another round.
+      </p>
+      <div class="panel">
+        <p id="turn" role="status"></p>
+        <div class="board">
+          <button
+            class="cell"
+            data-index="0"
+            aria-label="Cell 1, empty"
+          ></button
+          ><button
+            class="cell"
+            data-index="1"
+            aria-label="Cell 2, empty"
+          ></button
+          ><button
+            class="cell"
+            data-index="2"
+            aria-label="Cell 3, empty"
+          ></button
+          ><button
+            class="cell"
+            data-index="3"
+            aria-label="Cell 4, empty"
+          ></button
+          ><button
+            class="cell"
+            data-index="4"
+            aria-label="Cell 5, empty"
+          ></button
+          ><button
+            class="cell"
+            data-index="5"
+            aria-label="Cell 6, empty"
+          ></button
+          ><button
+            class="cell"
+            data-index="6"
+            aria-label="Cell 7, empty"
+          ></button
+          ><button
+            class="cell"
+            data-index="7"
+            aria-label="Cell 8, empty"
+          ></button
+          ><button
+            class="cell"
+            data-index="8"
+            aria-label="Cell 9, empty"
+          ></button>
+        </div>
+        <button id="reset">Reset game</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

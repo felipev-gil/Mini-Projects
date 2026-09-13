@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shape Clicker · Mini Projects</title>
+    <meta
+      name="description"
+      content="Wait for a randomly sized shape, then click or tap it to measure your reaction time."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Shape Clicker</h1>
+      <p class="intro">
+        Wait for a randomly sized shape, then click or tap it to measure your
+        reaction time.
+      </p>
+      <div class="panel">
+        <div class="actions">
+          <button id="start" class="primary">Start / restart</button
+          ><button id="stop" disabled>Stop</button>
+        </div>
+        <p id="reaction">Press Start to begin.</p>
+        <div id="arena">
+          <button id="shape" aria-label="Catch the shape" hidden></button>
+        </div>
+        <p class="note">
+          After each catch, another shape appears following a short random
+          delay. Keyboard users can Tab to the shape and press Enter; that
+          measures navigation time too.
+        </p>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Shape%20Clicker%20Game/index.html"
+          >Shape Clicker Game example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

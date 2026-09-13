@@ -1,0 +1,6 @@
+.mini-app #qr canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}

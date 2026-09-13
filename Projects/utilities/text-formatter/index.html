@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text Formatter · Mini Projects</title>
+    <meta
+      name="description"
+      content="Change text case and toggle bold, italic, or underline in a live preview."
+    />
+    <link rel="icon" href="../../../Assets/favicon.svg" />
+    <link rel="stylesheet" href="../../../Shared/style.css" />
+    <link rel="stylesheet" href="../../../Shared/project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../../Shared/script.js"></script>
+  </head>
+  <body class="project-page">
+    <div id="header-component"></div>
+    <main id="main" class="mini-app">
+      <h1>Text Formatter</h1>
+      <p class="intro">
+        Change text case and toggle bold, italic, or underline in a live
+        preview.
+      </p>
+      <div class="panel">
+        <label for="text">Your text</label><textarea id="text"></textarea>
+        <div class="actions">
+          <button id="format-0">Uppercase</button
+          ><button id="format-1">Lowercase</button
+          ><button id="format-2">Sentence case</button
+          ><button id="format-3" aria-pressed="false">Bold</button
+          ><button id="format-4" aria-pressed="false">Italic</button
+          ><button id="format-5" aria-pressed="false">Underline</button
+          ><button id="format-6">Reset</button>
+        </div>
+        <h2>Preview</h2>
+        <p id="preview" class="formatted"></p>
+        <button id="copy">Copy plain text</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">
+        Adapted from the preserved
+        <a href="../../../Projects%20Examples/Text%20Formatter/index.html"
+          >Text Formatter example</a
+        >.
+      </p>
+    </main>
+    <div id="footer-component"></div>
+    <script src="../../../Shared/project.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

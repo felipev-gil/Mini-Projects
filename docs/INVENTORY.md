@@ -1,6 +1,6 @@
 # Inventory and integration record
 
-Inspected September 12, 2026: **4 integrated projects + 21 original examples = 25 catalog entries**. All original files under `Projects Examples` remain unchanged. Every integrated page has an explicit `index.html` catalog URL, shared navigation, theme support, responsive layout, and labeled controls.
+Inspected September 12, 2026: **4 previously integrated projects + 21 examples = 25 catalog entries**. After all integrated versions passed verification, the redundant `Projects Examples` source folder was removed at the repository owner's request. Every integrated page has an explicit `index.html` catalog URL, shared navigation, theme support, responsive layout, and labeled controls.
 
 `projects.json` is the source of catalog metadata; this table is a dated audit, not a second runtime registry. All integrated programs use HTML, CSS and vanilla JavaScript. Dependencies below are browser features or public services unless stated otherwise.
 
@@ -42,8 +42,8 @@ The page is integrated and tested with controlled success, no-results, HTTP 429 
 
 The home page had duplicate `favorites` IDs and never rendered curated favorites. Header theme initialization depended on a page-owned `themeButton`; the footer year ran before its fragment loaded. Asset references disagreed with the `Assets` directory and `Logo.png` casing. Shared element/class selectors affected project content, and responsive grid rules targeted flex layouts. These were replaced with a self-contained shell, opt-in project styles and actual catalog grids.
 
-The old `currency-convertor/index.html` remains as a relative redirect to `currency-converter/index.html`, preserving historical links. Original PNG/ICO assets remain; the active logo and small favicon use purpose-made SVG files with exact-case paths.
+The misspelled `currency-convertor` compatibility folder, unused shared HTML fragments, and replaced PNG/ICO assets were removed after their active references were eliminated. The active logo and small favicon use purpose-made SVG files with exact-case paths.
 
-## Preservation and attribution
+## Attribution
 
-All 21 example directories and their original contents, including quote attributions, image URLs, comments and service credits, remain intact. Each new integration links to its corresponding example. Integrated pages retain relevant service/photographer credits. QRCode.js has its upstream MIT license and a documented local Unicode repair in `Assets/vendor`. No repository-wide license file existed at inspection; the old README's unsupported blanket MIT claim was removed.
+Integrated pages retain relevant API, image, photographer, and quotation credits. QRCode.js has its upstream MIT license and a documented local Unicode repair in `Assets/vendor`. No repository-wide license file existed at inspection; the old README's unsupported blanket MIT claim was removed.

@@ -27,7 +27,6 @@ Open [the local portfolio](http://127.0.0.1:4173/). Use [the repository subpath]
 - Search and category filters combine. Favorites remain independent of both.
 - Shared navigation and a persisted light/dark theme work on each project page.
 - API pages have loading, empty and failure feedback. Requests time out, queries are encoded, and displayed external text uses DOM text nodes.
-- Original examples remain in `Projects Examples` for reference.
 
 | Project                                                                            | Category         | Availability                                        |
 | ---------------------------------------------------------------------------------- | ---------------- | --------------------------------------------------- |
@@ -81,7 +80,6 @@ Shared/style.css                   Theme tokens and scoped shell styles
 Shared/project.css                 Explicit opt-in mini-project baseline
 Shared/project.js                  Small DOM, request, clipboard and meal helpers
 Projects/<category>/<project>/     Integrated HTML, CSS and JavaScript
-Projects Examples/                 Unmodified learning examples
 Assets/                           Logo, favicon and licensed QR dependency
 docs/                             Inventory, verification and screenshots
 tools/                            Optional static server and browser checks
@@ -118,4 +116,4 @@ No deployment URL for this finished revision has been verified. Add a Live Demo 
 
 See [verification results and the short manual checklist](docs/VERIFICATION.md). Public APIs and hosted images may change, become rate limited, or go offline. Local utilities do not require those services. Task/theme persistence depends on browser storage availability; tasks remain usable in memory when writes are denied. The password meter is a learning checklist, and quoted author attributions are preserved rather than independently authenticated.
 
-QRCode.js attribution and its local repair are documented in [Assets/vendor](Assets/vendor/README.md). Original examples retain their attribution. No repository-wide license file was present at inspection; third-party material retains its own terms.
+QRCode.js attribution and its local repair are documented in [Assets/vendor](Assets/vendor/README.md). API, image, quotation, and third-party library credits remain in the integrated projects. No repository-wide license file was present at inspection; third-party material retains its own terms.

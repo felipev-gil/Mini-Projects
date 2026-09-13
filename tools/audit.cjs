@@ -75,19 +75,10 @@ for (const file of scripts) {
   if (check.status !== 0)
     errors.push("Syntax error: " + file + " " + check.stderr);
 }
-const originalDiff = cp.spawnSync(
-  "git",
-  ["diff", "--exit-code", "--", "Projects Examples"],
-  { cwd: root, encoding: "utf8" },
-);
-if (originalDiff.status !== 0)
-  errors.push(
-    "Original examples changed (or Git unavailable). Review preservation before publishing.",
-  );
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exitCode = 1;
 } else
   console.log(
-    `PASS: ${projects.length} catalog entries; ${htmlFiles.length} HTML pages; ${links} exact-case local links; ${scripts.length} JavaScript syntax checks; original examples unchanged.`,
+    `PASS: ${projects.length} catalog entries; ${htmlFiles.length} HTML pages; ${links} exact-case local links; ${scripts.length} JavaScript syntax checks.`,
   );

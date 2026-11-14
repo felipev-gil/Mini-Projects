@@ -1,0 +1,48 @@
+.tic-tac-toe {
+  max-width: 31rem;
+}
+
+.tic-tac-toe .game-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+}
+
+.tic-tac-toe .game-toolbar .status {
+  flex: 1;
+  min-width: 10rem;
+  font-weight: 600;
+}
+
+.tic-tac-toe .board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .65rem;
+}
+
+.tic-tac-toe .cell {
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: .25rem;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  background: var(--bg);
+}
+
+.tic-tac-toe .cell[data-player="X"] {
+  color: var(--accent);
+}
+
+.tic-tac-toe .cell[data-player="O"] {
+  color: var(--success);
+}
+
+.tic-tac-toe .cell[aria-disabled="true"] {
+  cursor: default;
+}
+
+.tic-tac-toe .cell.winning {
+  border: 3px solid var(--success);
+  background: var(--surface-raised);
+}

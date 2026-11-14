@@ -1,0 +1,3 @@
+.qr-code-generator #qr { background: #fff; padding: 32px; width: fit-content; max-width: 100%; margin-inline: auto; }
+.qr-code-generator #qr img, .qr-code-generator #qr canvas { max-width: 100%; height: auto; }
+.qr-code-generator #result { margin-top: 1rem; }

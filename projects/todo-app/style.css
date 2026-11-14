@@ -1,0 +1,83 @@
+.todo-app .task-entry {
+  display: flex;
+  gap: .6rem;
+}
+
+.todo-app .task-entry button {
+  flex-shrink: 0;
+}
+
+.todo-app .task-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  border-block: 1px solid var(--border);
+  padding-block: 1rem;
+}
+
+.todo-app .task-filters button {
+  font-size: .9rem;
+}
+
+.todo-app .todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-app .todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding-block: .75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.todo-app .todo-item label {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  min-width: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.todo-app .todo-item span {
+  overflow-wrap: anywhere;
+}
+
+.todo-app .completed label span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.todo-app .delete-task {
+  flex-shrink: 0;
+  color: var(--danger);
+  font-size: .85rem;
+}
+
+.todo-app .task-empty {
+  padding-block: 1.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.todo-app .task-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-app .task-footer button {
+  font-size: .85rem;
+}
+
+@media (max-width: 400px) {
+  .todo-app .task-entry {
+    flex-direction: column;
+  }
+}

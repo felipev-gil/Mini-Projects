@@ -1,0 +1,5 @@
+.recipe-explorer { max-width: 58rem; }
+.recipe-explorer .result-grid .media { aspect-ratio: 4 / 3; object-fit: cover; }
+
+.recipe-explorer .random-action { display: flex; justify-content: center; margin-block: 1.5rem; }
+

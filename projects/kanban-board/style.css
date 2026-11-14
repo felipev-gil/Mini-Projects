@@ -1,0 +1,8 @@
+.kanban-board { max-width: 68rem; }
+.kanban-board .board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+.kanban-board .kanban-card { background: var(--surface-raised); padding: 1rem; border: 1px solid var(--border); border-radius: .7rem; overflow-wrap: anywhere; }
+.kanban-board .kanban-card p { margin: 0; }
+@media (max-width: 800px) { .kanban-board .board { grid-template-columns: 1fr; } }
+
+.kanban-board > .help-text { margin-block: 1.5rem; }
+

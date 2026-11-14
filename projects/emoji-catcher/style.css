@@ -1,0 +1,2 @@
+.emoji-catcher .catch-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+.emoji-catcher .catch-grid button { aspect-ratio: 1.3; font-size: clamp(2rem, 8vw, 3rem); background: var(--surface-raised); color: var(--text); border: 1px solid var(--control-border); }

@@ -1,0 +1,16 @@
+/* Optional layouts used by the collection's utility, API, and game apps. */
+.project-app .actions { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; }
+.project-app .actions > * { min-width: 0; }
+.project-app .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; }
+.project-app .media { width: 100%; max-height: 22rem; object-fit: contain; border-radius: .7rem; background: var(--surface-raised); }
+.project-app .portrait { width: 10rem; height: 10rem; object-fit: contain; margin-inline: auto; display: block; }
+.project-app .metric { font-size: clamp(1.7rem, 6vw, 3rem); font-variant-numeric: tabular-nums; color: var(--accent); }
+.project-app .preserve-lines { white-space: pre-wrap; overflow-wrap: anywhere; }
+.project-app .fact { padding-block: .35rem; margin: 0; overflow-wrap: anywhere; }
+.project-app #result:not(:empty) { margin-top: 1rem; }
+.project-app progress, .project-app meter { width: 100%; accent-color: var(--accent); }
+.project-app [hidden] { display: none !important; }
+.project-app figure { margin: 0; }
+.project-app figcaption { padding-block: .6rem; }
+.project-app .result-card { min-width: 0; overflow-wrap: anywhere; }
+

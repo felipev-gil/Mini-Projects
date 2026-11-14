@@ -1,0 +1,258 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.hero-copy {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.75rem, 6.5vw, 5rem);
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero-text {
+  max-width: 35rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.text-link {
+  font-size: .9rem;
+}
+
+.tech-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 0;
+  margin: .5rem 0 0;
+}
+
+.tech-list li {
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .2rem .65rem;
+  font-size: .75rem;
+}
+
+.hero-art {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  background: radial-gradient(ellipse at 75% 30%, #8d6feb25, transparent 65%), var(--surface);
+  transform: rotate(3deg);
+}
+
+.art-label {
+  font-size: .65rem;
+  letter-spacing: .16em;
+  color: var(--muted);
+}
+
+.code-mark {
+  font: 700 clamp(5rem, 10vw, 9rem)/1 monospace;
+  color: var(--accent);
+  text-align: center;
+  letter-spacing: -.12em;
+  padding-right: .12em;
+}
+
+.art-caption {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.catalog-section {
+  padding-block: 2rem 3rem;
+}
+
+.section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  margin-top: .5rem;
+}
+
+.section-heading > p {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.featured-grid, .project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform var(--motion), border-color var(--motion), background-color var(--motion), box-shadow var(--motion);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  background: var(--surface-raised);
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.project-card h3 {
+  overflow-wrap: anywhere;
+}
+
+.card-top, .card-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
+
+.card-bottom {
+  margin-top: auto;
+  padding-top: .5rem;
+}
+
+.card-emoji {
+  font-size: 1.7rem;
+}
+
+.card-open {
+  color: var(--accent);
+  font-size: .9rem;
+  font-weight: 650;
+}
+
+.featured-grid .project-card {
+  border-top: 3px solid var(--accent);
+}
+
+.catalog-controls {
+  display: grid;
+  gap: 1rem;
+}
+
+.search-field {
+  display: grid;
+  gap: .4rem;
+  max-width: 34rem;
+}
+
+.search-field label {
+  font-size: .9rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.filters .chip {
+  min-height: 2.5rem;
+  font-size: .85rem;
+  border-radius: 999px;
+}
+
+.catalog-status {
+  margin-block: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  border-top: 1px solid var(--border);
+  padding-block: 3rem 4rem;
+  margin-top: 1rem;
+}
+
+.about-section h2 {
+  margin-top: .75rem;
+}
+
+.about-section .stack p {
+  color: var(--muted);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .hero {
+    gap: 2rem;
+  }
+  .featured-grid, .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .hero, .about-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero-art {
+    display: none;
+  }
+  .featured-grid, .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    padding: 1.25rem;
+  }
+}

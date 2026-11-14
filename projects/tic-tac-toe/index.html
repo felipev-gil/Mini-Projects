@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Two players, one device. Take turns placing X and O; connect three in a row to win.">
+    <title>Tic Tac Toe · Mini Projects</title>
+    <link rel="icon" href="../../assets/favicon.ico">
+    <script src="../../shared/script.js">
+    </script>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js">
+    </script>
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="header-component">
+      <nav class="container fallback-nav" aria-label="Main navigation">
+        <a href="../../index.html">Mini Projects</a>
+        <a href="../../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+    <main id="main" class="project-shell container" tabindex="-1">
+      <header class="project-heading">
+        <p class="eyebrow">Mini Projects / Tic Tac Toe</p>
+        <h1>Tic Tac Toe</h1>
+        <p>Two players, one device. Take turns placing X and O; connect three in a row to win.</p>
+      </header>
+      <noscript>
+        <p class="panel project-app">Enable JavaScript to use this app.</p>
+      </noscript>
+      <div class="project-app tic-tac-toe">
+        <div class="panel stack">
+          <div class="game-toolbar">
+            <p id="game-status" class="status" role="status" aria-live="polite">Player X’s turn.</p>
+            <button id="reset" type="button">New game</button>
+          </div>
+          <div id="board" class="board" role="group" aria-label="Tic Tac Toe board">
+            <button type="button" class="cell" data-index="0" aria-label="Row 1, column 1: empty"></button>
+            <button type="button" class="cell" data-index="1" aria-label="Row 1, column 2: empty"></button>
+            <button type="button" class="cell" data-index="2" aria-label="Row 1, column 3: empty"></button>
+            <button type="button" class="cell" data-index="3" aria-label="Row 2, column 1: empty"></button>
+            <button type="button" class="cell" data-index="4" aria-label="Row 2, column 2: empty"></button>
+            <button type="button" class="cell" data-index="5" aria-label="Row 2, column 3: empty"></button>
+            <button type="button" class="cell" data-index="6" aria-label="Row 3, column 1: empty"></button>
+            <button type="button" class="cell" data-index="7" aria-label="Row 3, column 2: empty"></button>
+            <button type="button" class="cell" data-index="8" aria-label="Row 3, column 3: empty"></button>
+          </div>
+        </div>
+      </div>
+      <aside class="project-notes" aria-label="About this app">
+        <p>
+          X starts each game. A row, column, or diagonal of three matching marks wins. A full board
+          without a winner is a draw.
+        </p>
+        <p>
+          Use Tab or the arrow keys to move between cells, then Enter or Space to place your mark. Select
+          New game to reset the board.
+        </p>
+      </aside>
+    </main>
+    <div id="footer-component">
+      <footer class="site-footer container">
+        Mini Projects · Felipe Vanegas Gil
+      </footer>
+    </div>
+  </body>
+</html>

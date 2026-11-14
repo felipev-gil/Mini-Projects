@@ -1,0 +1,8 @@
+# Local output and operating-system files
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+

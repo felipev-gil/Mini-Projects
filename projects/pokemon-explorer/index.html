@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Look up a Pokémon by name or number, or meet a random member of the original 151.">
+    <title>Pokémon Explorer · Mini Projects</title>
+    <link rel="icon" href="../../assets/favicon.ico">
+    <script src="../../shared/script.js"></script>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/project-ui.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="header-component">
+      <nav class="container fallback-nav" aria-label="Main navigation">
+        <a href="../../index.html">Mini Projects</a>
+        <a href="../../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+    <main id="main" class="project-shell container" tabindex="-1">
+      <header class="project-heading">
+        <p class="eyebrow">Mini Projects / Explorers</p>
+        <h1>Pokémon Explorer</h1>
+        <p>Look up a Pokémon by name or number, or meet a random member of the original 151.</p>
+      </header>
+      <noscript>
+        <p class="panel project-app">Enable JavaScript to use this app.</p>
+      </noscript>
+      <div class="project-app pokemon-explorer">
+        <form id="search-form" class="panel stack">
+          <label class="field">
+            Pokémon name or number
+            <input id="query" required maxlength="100" placeholder="For example, pikachu or 25">
+          </label>
+          <button type="submit">Search</button>
+        </form>
+        <div class="random-action">
+          <button id="random">Random Pokémon</button>
+        </div>
+        <div id="result" class="stack" aria-busy="false"></div>
+        <p id="status" class="status" role="status"></p>
+      </div>
+      <aside class="project-notes" aria-label="About this app">
+        <p>
+          Names, stats, and images come from <a href="https://pokeapi.co/">PokéAPI</a>. Searches are
+          sent to that service and are not saved here. Pokémon names and artwork belong to their respective
+          rights holders; this is an unofficial educational demo.
+        </p>
+      </aside>
+    </main>
+    <div id="footer-component">
+      <footer class="site-footer container">
+        Mini Projects · Felipe Vanegas Gil
+      </footer>
+    </div>
+  </body>
+</html>

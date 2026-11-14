@@ -1,0 +1,4 @@
+.pokemon-explorer h2 { text-transform: capitalize; }
+
+.pokemon-explorer .random-action { display: flex; justify-content: center; margin-block: 1.5rem; }
+

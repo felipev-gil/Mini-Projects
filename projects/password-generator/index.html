@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create a random password on your device. Choose a length and the character groups you want to include.">
+    <title>Password Generator · Mini Projects</title>
+    <link rel="icon" href="../../assets/favicon.ico">
+    <script src="../../shared/script.js">
+    </script>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js">
+    </script>
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="header-component">
+      <nav class="container fallback-nav" aria-label="Main navigation">
+        <a href="../../index.html">Mini Projects</a>
+        <a href="../../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+    <main id="main" class="project-shell container" tabindex="-1">
+      <header class="project-heading">
+        <p class="eyebrow">Mini Projects / Password Generator</p>
+        <h1>Password Generator</h1>
+        <p>
+          Create a random password on your device. Choose a length and the character groups you want to
+          include.
+        </p>
+      </header>
+      <noscript>
+        <p class="panel project-app">Enable JavaScript to use this app.</p>
+      </noscript>
+      <div class="project-app password-generator">
+        <form id="password-form" class="panel stack">
+          <div class="field">
+            <label for="password">
+              Generated password
+            </label>
+            <div class="password-output">
+              <input id="password" type="text" readonly autocomplete="off" spellcheck="false" aria-describedby="password-help">
+              <button id="copy" type="button" disabled>Copy</button>
+            </div>
+            <p id="password-help" class="help-text">Every selected character group appears at least once.</p>
+          </div>
+          <div class="field">
+            <label for="length">
+              Password length:
+              <output id="length-value" for="length">16</output>
+            </label>
+            <input id="length" type="range" min="8" max="44" value="16">
+          </div>
+          <fieldset class="character-options">
+            <legend>Include characters</legend>
+            <label>
+              <span>Uppercase <small>A–Z</small></span>
+              <input type="checkbox" name="group" value="uppercase" checked>
+            </label>
+            <label>
+              <span>Lowercase <small>a–z</small></span>
+              <input type="checkbox" name="group" value="lowercase" checked>
+            </label>
+            <label>
+              <span>Numbers <small>0–9</small></span>
+              <input type="checkbox" name="group" value="numbers" checked>
+            </label>
+            <label>
+              <span>Symbols <small>! @ # …</small></span>
+              <input type="checkbox" name="group" value="symbols" checked>
+            </label>
+          </fieldset>
+          <button id="generate" class="button-primary" type="submit">Generate password</button>
+          <div class="strength">
+            <div class="strength-heading">
+              <label for="strength-meter">
+                Estimated strength
+              </label>
+              <span id="strength-label">—</span>
+            </div>
+            <meter id="strength-meter" min="0" max="100" low="45" high="75" optimum="100" value="0">0</meter>
+            <p class="help-text">A rough guide based on length and character variety, not a security guarantee.</p>
+          </div>
+          <p id="password-status" class="status help-text" role="status"></p>
+        </form>
+      </div>
+      <aside class="project-notes" aria-label="About this app">
+        <p>
+          Passwords are generated with your browser’s cryptographic random number generator. They are
+          never stored or sent to a server.
+        </p>
+        <p>
+          Copy uses the system clipboard and requires HTTPS or localhost. Use a unique password for each
+          account.
+        </p>
+      </aside>
+    </main>
+    <div id="footer-component">
+      <footer class="site-footer container">
+        Mini Projects · Felipe Vanegas Gil
+      </footer>
+    </div>
+  </body>
+</html>

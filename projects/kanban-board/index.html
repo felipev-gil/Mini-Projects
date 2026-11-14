@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Organize tasks into To do, In progress, and Done using drag and drop or simple move controls.">
+    <title>Kanban Board · Mini Projects</title>
+    <link rel="icon" href="../../assets/favicon.ico">
+    <script src="../../shared/script.js"></script>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/project-ui.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="header-component">
+      <nav class="container fallback-nav" aria-label="Main navigation">
+        <a href="../../index.html">Mini Projects</a>
+        <a href="../../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+    <main id="main" class="project-shell container" tabindex="-1">
+      <header class="project-heading">
+        <p class="eyebrow">Mini Projects / Productivity</p>
+        <h1>Kanban Board</h1>
+        <p>Organize tasks into To do, In progress, and Done using drag and drop or simple move controls.</p>
+      </header>
+      <noscript>
+        <p class="panel project-app">Enable JavaScript to use this app.</p>
+      </noscript>
+      <div class="project-app kanban-board">
+        <form id="add-form" class="panel stack">
+          <label class="field">
+            New task
+            <input id="task" maxlength="200" required placeholder="What needs to be done?">
+          </label>
+          <button type="submit">Add task</button>
+        </form>
+        <p class="help-text">Drag a card to a column, or choose a destination from its Move to menu.</p>
+        <div id="board" class="board"></div>
+        <p id="status" class="status" role="status"></p>
+      </div>
+      <aside class="project-notes" aria-label="About this app">
+        <p>
+          Tasks are saved only in this browser. There is no account or synchronization. If storage is
+          blocked, the board still works for this visit. Drag and drop is optional; every task has
+          keyboard and touch controls.
+        </p>
+      </aside>
+    </main>
+    <div id="footer-component">
+      <footer class="site-footer container">
+        Mini Projects · Felipe Vanegas Gil
+      </footer>
+    </div>
+  </body>
+</html>

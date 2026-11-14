@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore inline form validation and password requirements without creating an account.">
+    <title>Form Validation Demo · Mini Projects</title>
+    <link rel="icon" href="../../assets/favicon.ico">
+    <script src="../../shared/script.js"></script>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/project-ui.css">
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="header-component">
+      <nav class="container fallback-nav" aria-label="Main navigation">
+        <a href="../../index.html">Mini Projects</a>
+        <a href="../../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+    <main id="main" class="project-shell container" tabindex="-1">
+      <header class="project-heading">
+        <p class="eyebrow">Mini Projects / UI Experiments</p>
+        <h1>Form Validation Demo</h1>
+        <p>Explore inline form validation and password requirements without creating an account.</p>
+      </header>
+      <noscript>
+        <p class="panel project-app">Enable JavaScript to use this app.</p>
+      </noscript>
+      <div class="project-app form-validation-demo">
+        <form id="demo-form" class="panel stack" novalidate>
+          <p class="help-text">Demo only. Use made-up details; nothing is submitted or saved.</p>
+          <label class="field">
+            Display name
+            <input id="name" autocomplete="off" maxlength="80" required aria-describedby="name-error">
+          </label>
+          <p id="name-error" class="status" data-tone="error"></p>
+          <label class="field">
+            Email
+            <input id="email" type="email" autocomplete="off" maxlength="254" required aria-describedby="email-error">
+          </label>
+          <p id="email-error" class="status" data-tone="error"></p>
+          <label class="field">
+            Practice password
+            <input id="password" type="password" autocomplete="new-password" maxlength="128" required aria-describedby="requirements password-error">
+          </label>
+          <button id="show" type="button" aria-pressed="false">Show password</button>
+          <ul id="requirements">
+            <li>At least 12 characters</li>
+            <li>At least one letter</li>
+            <li>At least one number</li>
+            <li>At least one uppercase letter</li>
+            <li>At least one special character</li>
+          </ul>
+          <p id="password-error" class="status" data-tone="error"></p>
+          <label class="field">
+            Confirm password
+            <input id="confirm" type="password" autocomplete="new-password" maxlength="128" required aria-describedby="confirm-error">
+          </label>
+          <p id="confirm-error" class="status" data-tone="error"></p>
+          <button type="submit">Validate demo form</button>
+        </form>
+        <p id="status" class="status" role="status"></p>
+      </div>
+      <aside class="project-notes" aria-label="About this app">
+        <p>
+          This is a client-side validation exercise, not authentication. Matching character requirements
+          does not prove a password is strong or uncompromised. No account is created and no form data is
+          sent or saved.
+        </p>
+      </aside>
+    </main>
+    <div id="footer-component">
+      <footer class="site-footer container">
+        Mini Projects · Felipe Vanegas Gil
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+[
+  {
+    "id": "currency-converter",
+    "title": "Currency Converter",
+    "description": "Convert between ten currencies with published exchange rates and a clear update timestamp.",
+    "category": "Utilities",
+    "tags": [
+      "api",
+      "currency",
+      "exchange rates",
+      "forms"
+    ],
+    "emoji": "💱",
+    "featured": true
+  },
+  {
+    "id": "todo-app",
+    "title": "Todo App",
+    "description": "Keep track of your tasks, mark progress, and pick up where you left off in this browser.",
+    "category": "Productivity",
+    "tags": [
+      "tasks",
+      "local storage",
+      "productivity"
+    ],
+    "emoji": "✓",
+    "featured": true
+  },
+  {
+    "id": "tic-tac-toe",
+    "title": "Tic Tac Toe",
+    "description": "Challenge a friend to a classic game of three in a row, on the same device.",
+    "category": "Games",
+    "tags": [
+      "game",
+      "two players",
+      "state"
+    ],
+    "emoji": "✕",
+    "featured": true
+  },
+  {
+    "id": "password-generator",
+    "title": "Password Generator",
+    "description": "Create a random password on your device, choose its character groups, and copy it in one click.",
+    "category": "Utilities",
+    "tags": [
+      "password",
+      "web crypto",
+      "clipboard"
+    ],
+    "emoji": "🔑",
+    "featured": true
+  },
+  {
+    "id": "text-analyzer",
+    "title": "Text Analyzer",
+    "description": "Count words and characters, change letter case, and preview simple text formatting.",
+    "category": "Utilities",
+    "tags": [
+      "text",
+      "words",
+      "characters",
+      "formatting",
+      "clipboard",
+      "unicode"
+    ],
+    "emoji": "Aa",
+    "featured": true
+  },
+  {
+    "id": "stopwatch",
+    "title": "Stopwatch",
+    "description": "Measure elapsed time, pause and resume, and record laps.",
+    "category": "Utilities",
+    "tags": [
+      "timer",
+      "time",
+      "laps",
+      "performance"
+    ],
+    "emoji": "⏱",
+    "featured": false
+  },
+  {
+    "id": "form-validation-demo",
+    "title": "Form Validation Demo",
+    "description": "Explore inline form validation and password requirements without creating an account.",
+    "category": "UI Experiments",
+    "tags": [
+      "forms",
+      "validation",
+      "password",
+      "accessibility"
+    ],
+    "emoji": "☑",
+    "featured": false
+  },
+  {
+    "id": "kanban-board",
+    "title": "Kanban Board",
+    "description": "Organize tasks into To do, In progress, and Done using drag and drop or simple move controls.",
+    "category": "Productivity",
+    "tags": [
+      "tasks",
+      "drag and drop",
+      "local storage",
+      "keyboard"
+    ],
+    "emoji": "▥",
+    "featured": false
+  },
+  {
+    "id": "emoji-catcher",
+    "title": "Emoji Catcher",
+    "description": "Catch as many smiling faces as you can in a 30-second round.",
+    "category": "Games",
+    "tags": [
+      "reaction",
+      "emoji",
+      "timer",
+      "keyboard"
+    ],
+    "emoji": "☺",
+    "featured": false
+  },
+  {
+    "id": "reaction-time-game",
+    "title": "Reaction Time Game",
+    "description": "Wait for the target, then select it as quickly as you can.",
+    "category": "Games",
+    "tags": [
+      "reaction",
+      "timing",
+      "mouse",
+      "touch"
+    ],
+    "emoji": "◎",
+    "featured": false
+  },
+  {
+    "id": "country-explorer",
+    "title": "Country Explorer",
+    "description": "Search countries and territories by name or country code, and explore capitals, languages, and currencies.",
+    "category": "Explorers",
+    "tags": [
+      "countries",
+      "capitals",
+      "languages",
+      "geography",
+      "offline"
+    ],
+    "emoji": "🌍",
+    "featured": false
+  },
+  {
+    "id": "pokemon-explorer",
+    "title": "Pokémon Explorer",
+    "description": "Look up a Pokémon by name or number, or meet a random member of the original 151.",
+    "category": "Explorers",
+    "tags": [
+      "pokemon",
+      "api",
+      "search",
+      "stats"
+    ],
+    "emoji": "◓",
+    "featured": false
+  },
+  {
+    "id": "recipe-explorer",
+    "title": "Recipe Explorer",
+    "description": "Search for a meal or discover a random recipe, with ingredients and step-by-step instructions.",
+    "category": "Explorers",
+    "tags": [
+      "api",
+      "meals",
+      "food",
+      "recipes",
+      "ingredients",
+      "random"
+    ],
+    "emoji": "🍲",
+    "featured": true
+  },
+  {
+    "id": "github-profile-finder",
+    "title": "GitHub Profile Finder",
+    "description": "Explore a public GitHub profile and its six most recently updated repositories.",
+    "category": "Explorers",
+    "tags": [
+      "github",
+      "api",
+      "profiles",
+      "repositories",
+      "search"
+    ],
+    "emoji": "⌘",
+    "featured": false
+  },
+  {
+    "id": "avatar-generator",
+    "title": "Avatar Generator",
+    "description": "Turn a nickname into a repeatable illustrated avatar, with three styles to explore.",
+    "category": "Utilities",
+    "tags": [
+      "avatars",
+      "images",
+      "api",
+      "nickname",
+      "dicebear"
+    ],
+    "emoji": "♧",
+    "featured": false
+  },
+  {
+    "id": "qr-code-generator",
+    "title": "QR Code Generator",
+    "description": "Create a QR code for short text or a URL entirely on your device.",
+    "category": "Utilities",
+    "tags": [
+      "qr",
+      "text",
+      "url",
+      "canvas",
+      "download",
+      "unicode"
+    ],
+    "emoji": "▦",
+    "featured": false
+  }
+]

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore small, useful browser apps and games built with HTML, CSS, and JavaScript by Felipe Vanegas Gil.">
+    <title>Mini Projects · Small apps, thoughtful details</title>
+    <link rel="icon" href="./assets/favicon.ico">
+    <script src="./shared/script.js">
+    </script>
+    <link rel="stylesheet" href="./shared/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer>
+    </script>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="header-component">
+      <nav class="container fallback-nav" aria-label="Main navigation">
+        <a href="./index.html">Mini Projects</a>
+        <a href="#projects">Browse projects</a>
+      </nav>
+    </div>
+    <main id="main" tabindex="-1">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A collection by Felipe Vanegas Gil</p>
+          <h1 id="hero-title">
+            Small apps.
+            <br>
+            <span>Thoughtful details.</span>
+          </h1>
+          <p class="hero-text">
+            Useful tools, playful ideas, and hands-on experiments. Explore what a little HTML, CSS, and
+            JavaScript can do.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore the collection ↓</a>
+            <a class="text-link" href="#about">About this collection</a>
+          </div>
+          <ul class="tech-list" aria-label="Built with">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>No frameworks</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="art-label">THE BROWSER IS THE PLAYGROUND</span>
+          <div class="code-mark">
+            &lt;/&gt;
+          </div>
+          <div class="art-caption">
+            <span>Ideas → Interfaces</span>
+            <span>HTML · CSS · JS</span>
+          </div>
+        </div>
+      </section>
+      <section id="featured" class="catalog-section container" aria-labelledby="featured-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Start here</p>
+            <h2 id="featured-title">Featured projects</h2>
+          </div>
+          <p>A few favorites, ready to try.</p>
+        </div>
+        <div id="featured-grid" class="featured-grid" aria-busy="true"></div>
+      </section>
+      <section id="projects" class="catalog-section container" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Find your next click</p>
+            <h2 id="projects-title">All projects</h2>
+          </div>
+          <p>Search by name, topic, or skill.</p>
+        </div>
+        <div class="catalog-controls">
+          <div class="search-field">
+            <label for="search">
+              Search projects
+            </label>
+            <input id="search" type="search" placeholder="Try “games” or “local storage”…" autocomplete="off" disabled>
+          </div>
+          <div id="filters" class="filters" role="group" aria-label="Filter by category"></div>
+        </div>
+        <p id="catalog-status" class="help-text catalog-status" role="status">Loading projects…</p>
+        <button id="retry" type="button" hidden>Try loading again</button>
+        <div id="grid" class="project-grid" aria-busy="true"></div>
+        <div id="empty" class="empty-state panel" hidden>
+          <h3>No projects found</h3>
+          <p>Try another search or clear your filters.</p>
+          <button id="clear-filters" type="button">Clear filters</button>
+        </div>
+        <noscript>
+          <p class="panel">
+            Enable JavaScript to browse and use the collection. The <a href="./README.md">project directory
+            and usage guide</a> lists every app.
+          </p>
+        </noscript>
+      </section>
+      <section id="about" class="about-section container" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">Learn by building</p>
+          <h2 id="about-title">
+            Simple tools.
+            <br>
+            Solid fundamentals.
+          </h2>
+        </div>
+        <div class="stack">
+          <p>
+            I’m Felipe, a developer who enjoys turning small ideas into useful experiences. This collection
+            explores browser fundamentals: accessible interfaces, responsive layouts, local storage, and
+            public APIs.
+          </p>
+          <p>Each app has a focused purpose. Open one, try it out, and explore the code to see how it works.</p>
+          <div class="social-links">
+            <a href="https://github.com/felipev-gil" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/felipev-gil/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://www.instagram.com/felipeee_gil/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+            <a href="mailto:felipevanegas2012@hotmail.com">Email ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="footer-component">
+      <footer class="site-footer container">
+        Mini Projects · Felipe Vanegas Gil
+      </footer>
+    </div>
+  </body>
+</html>

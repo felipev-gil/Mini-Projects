@@ -1,0 +1,12 @@
+.text-analyzer .bold { font-weight: 700; }
+.text-analyzer .italic { font-style: italic; }
+.text-analyzer .underline { text-decoration: underline; }
+.text-analyzer #preview { min-height: 5rem; }
+
+.text-analyzer .tool-group { min-width: 0; margin: 0; padding: 1rem; border: 1px solid var(--border); border-radius: .7rem; }
+.text-analyzer .tool-group legend { padding-inline: .4rem; font-weight: 600; }
+.text-analyzer .tool-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+.text-analyzer .tool-buttons button { padding-inline: .5rem; }
+.text-analyzer .text-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+@media (max-width: 400px) { .text-analyzer .tool-buttons { grid-template-columns: 1fr; } }
+

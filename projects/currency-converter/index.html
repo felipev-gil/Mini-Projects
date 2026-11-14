@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Convert an amount between currencies using the latest published exchange rates.">
+    <title>Currency Converter · Mini Projects</title>
+    <link rel="icon" href="../../assets/favicon.ico">
+    <script src="../../shared/script.js">
+    </script>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js">
+    </script>
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="header-component">
+      <nav class="container fallback-nav" aria-label="Main navigation">
+        <a href="../../index.html">Mini Projects</a>
+        <a href="../../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+    <main id="main" class="project-shell container" tabindex="-1">
+      <header class="project-heading">
+        <p class="eyebrow">Mini Projects / Currency Converter</p>
+        <h1>Currency Converter</h1>
+        <p>Convert an amount between currencies using the latest published exchange rates.</p>
+      </header>
+      <noscript>
+        <p class="panel project-app">Enable JavaScript to use this app.</p>
+      </noscript>
+      <div class="project-app currency-converter">
+        <form id="converter-form" class="panel stack" novalidate>
+          <div class="field">
+            <label for="amount">
+              Amount
+            </label>
+            <input id="amount" name="amount" type="number" inputmode="decimal" min="0" max="999999999" step="any" value="1" required aria-describedby="amount-help">
+            <p id="amount-help" class="help-text">Enter an amount from 0 to 999,999,999.</p>
+          </div>
+          <div class="currency-row">
+            <div class="field">
+              <label for="from">
+                From
+              </label>
+              <select id="from" name="from"></select>
+            </div>
+            <button id="swap" type="button" aria-label="Swap currencies">⇄</button>
+            <div class="field">
+              <label for="to">
+                To
+              </label>
+              <select id="to" name="to"></select>
+            </div>
+          </div>
+          <button id="convert" class="button-primary" type="submit">Convert amount</button>
+          <div class="conversion-output">
+            <p id="result" class="status" role="status" aria-live="polite">Choose your currencies and select Convert amount.</p>
+            <p id="rate-details" class="help-text"></p>
+          </div>
+          <p id="storage-status" class="help-text" role="status"></p>
+        </form>
+      </div>
+      <aside class="project-notes" aria-label="About this app">
+        <p>
+          Rates provided by <a href="https://www.exchangerate-api.com/">ExchangeRate-API</a> . The update
+          time is shown with each result; rates are not a live trading feed.
+        </p>
+        <p>
+          Results are estimates and exclude bank fees. Only the base currency is sent to the rate
+          provider. Your selected currencies are remembered in this browser.
+        </p>
+      </aside>
+    </main>
+    <div id="footer-component">
+      <footer class="site-footer container">
+        Mini Projects · Felipe Vanegas Gil
+      </footer>
+    </div>
+  </body>
+</html>

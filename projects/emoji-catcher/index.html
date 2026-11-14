@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Catch as many smiling faces as you can in a 30-second round."
+    />
+    <title>Emoji Catcher · Mini Projects</title>
+    <link rel="icon" href="../../assets/favicon.ico" />
+    <script src="../../shared/script.js"></script>
+    <link rel="stylesheet" href="../../shared/style.css" />
+    <link rel="stylesheet" href="../../shared/project-ui.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="header-component">
+      <nav class="container fallback-nav" aria-label="Main navigation">
+        <a href="../../index.html">Mini Projects</a>
+        <a href="../../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+    <main id="main" class="project-shell container" tabindex="-1">
+      <header class="project-heading">
+        <p class="eyebrow">Mini Projects / Games</p>
+        <h1>Emoji Catcher</h1>
+        <p>Catch as many smiling faces as you can in a 30-second round.</p>
+      </header>
+      <noscript>
+        <p class="panel project-app">Enable JavaScript to use this app.</p>
+      </noscript>
+      <div class="project-app emoji-catcher">
+        <div class="panel stack">
+          <div class="actions">
+            <p>Caught: <strong id="score">0</strong></p>
+            <p>Time left: <strong id="time">30</strong> seconds</p>
+          </div>
+          <div class="actions">
+            <p>Total faces: <strong id="total">0</strong></p>
+            <p>Missed: <strong id="missed">0</strong></p>
+            <p>Wrong clicks: <strong id="bad">0</strong></p>
+          </div>
+          <label class="field">
+            Pace
+            <select id="pace">
+              <option value="1200">Relaxed — 1.2 seconds</option>
+              <option value="900">Quick — 0.9 seconds</option>
+              <option value="600">Fast — 0.6 seconds</option>
+            </select>
+          </label>
+          <div
+            id="grid"
+            class="catch-grid"
+            aria-label="Catch the smiling face"
+          ></div>
+          <div class="actions">
+            <button id="start">Start round</button>
+            <button id="stop" disabled>Stop round</button>
+          </div>
+          <p class="help-text">
+            Catch the smiling face before it moves. Stop the round to change the
+            pace, then start a new round. A wrong click counts as a miss and
+            immediately moves the face. Total faces includes the current face;
+            any face left at the end counts as missed. Keyboard: focus the
+            board, move with arrow keys, and press Enter or Space to catch it.
+          </p>
+        </div>
+        <p id="status" class="status" role="status"></p>
+      </div>
+      <aside class="project-notes" aria-label="About this app">
+        <p>
+          The game starts only when you choose Start round. Scores are not
+          saved. The round ends using elapsed time, including time in background
+          tabs.
+        </p>
+      </aside>
+    </main>
+    <div id="footer-component">
+      <footer class="site-footer container">
+        Mini Projects · Felipe Vanegas Gil
+      </footer>
+    </div>
+  </body>
+</html>

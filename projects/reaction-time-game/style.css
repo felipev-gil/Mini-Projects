@@ -1,0 +1,2 @@
+.reaction-time-game .arena { height: 18rem; position: relative; background: var(--surface-raised); border: 1px solid var(--border); border-radius: .7rem; }
+.reaction-time-game #target { position: absolute; width: 64px; height: 64px; padding: 0; border-radius: 50%; font-size: 2rem; }

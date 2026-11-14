@@ -6,7 +6,7 @@ The homepage highlights **six featured projects**. The apps share responsive lay
 
 ![The Mini Projects homepage in dark mode, showing six featured apps in two rows](assets/collection-preview.jpg)
 
-- **Demo App:** [https://www.example.com](https://www.example.com)
+- **Demo App:** [https://mini-projects-gold.vercel.app/](https://mini-projects-gold.vercel.app/)
 
 ## Explore the collection
 

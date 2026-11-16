@@ -1,5 +1,19 @@
 [
   {
+    "id": "calculator",
+    "title": "Calculator",
+    "description": "Work through everyday calculations with decimals, parentheses, and keyboard support.",
+    "category": "Utilities",
+    "tags": [
+      "calculator",
+      "math",
+      "arithmetic",
+      "keyboard"
+    ],
+    "emoji": "＋",
+    "featured": false
+  },
+  {
     "id": "currency-converter",
     "title": "Currency Converter",
     "description": "Convert between ten currencies with published exchange rates and a clear update timestamp.",

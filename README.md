@@ -20,6 +20,7 @@ Open the homepage using a local web server, then:
 | Project               | What it does                                                                                               | Source and guide                                         |
 | --------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | Avatar Generator      | Turn a nickname into a repeatable illustrated avatar, with three styles to explore.                        | [Avatar Generator](projects/avatar-generator/)           |
+| Calculator            | Work through everyday calculations with decimals, parentheses, and keyboard support.                      | [Calculator](projects/calculator/)                       |
 | Country Explorer      | Search countries and territories by name or country code, and explore capitals, languages, and currencies. | [Country Explorer](projects/country-explorer/)           |
 | Currency Converter    | Convert between ten currencies with published exchange rates and a clear update timestamp.                 | [Currency Converter](projects/currency-converter/)       |
 | Emoji Catcher         | Catch as many smiling faces as you can in a 30-second round.                                               | [Emoji Catcher](projects/emoji-catcher/)                 |
@@ -81,7 +82,7 @@ With the preview server running, open [the browser checks](http://127.0.0.1:4173
 ## Data, privacy, and dependencies
 
 - **Local storage:** theme, Todo tasks, Kanban cards, and currency preferences stay in this browser. There is no account or cross-device sync. Storage failures do not prevent basic use.
-- **Local tools and games:** text, practice form values, passwords, QR contents, scores, and stopwatch laps are processed on-device. They are not saved by those apps. Copy buttons write to the clipboard only when selected; HTTPS or localhost is required.
+- **Local tools and games:** calculations, text, practice form values, passwords, QR contents, scores, and stopwatch laps are processed on-device. They are not saved by those apps. Copy buttons write to the clipboard only when selected; HTTPS or localhost is required.
 - **Country Explorer:** searches a bundled reference dataset locally. It does not send queries to a country API.
 - **Online explorers:** currency rates, recipes, GitHub profiles, Pokémon, and avatars use third-party services. Submitted search terms or avatar seeds are sent to the relevant provider; providers also receive ordinary network request information. Do not enter sensitive information into public searches.
 - **Currency Converter:** published exchange rates exclude fees and are not a live trading feed.
